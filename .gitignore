@@ -1,0 +1,7 @@
+.env
+token
+stored_tokens
+commands
+
+**__pycache__**
+scheurekabench/benchmark/scdata

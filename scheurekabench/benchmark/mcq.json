@@ -1,0 +1,371 @@
+{
+  "paper1": {
+    "insight #1": {
+      "summary": "The study identifies a significant shift in the tumor microenvironment of high-risk neuroblastoma post-chemotherapy, with an increase in mesenchymal neoplastic cells correlating with poorer chemotherapy response.",
+      "how": "Using single-nucleus RNA and ATAC sequencing, the authors profiled 22 patients with high-risk neuroblastoma before and after induction chemotherapy. They observed that the proportion of mesenchymal neoplastic cells increased after therapy, and a higher proportion of these cells correlated with a poorer response to chemotherapy. This was supported by statistical analyses showing significant post-therapy changes in cell state proportions, particularly in patients with mutated ALK genes, where the decrease in mesenchymal state was less pronounced. These findings are detailed in the Results section and supported by Figures 1 and 2.",
+      "relevant": "\"Next, we sought to determine how these newly defined populations shifted during therapy and found significant changes (Fig. 2e and Extended Data Fig. 3d). As expected, the abundance of ADRN-baseline and ADRN-proliferating populations decreased after therapy. Conversely, the ADRN-calcium, ADRN-dopaminergic, and Interm-OXPHOS populations exhibited significant increases after therapy (Fig. 2e). MES cells made up <10% of neoplastic cells in most samples, but some samples contained a high frequency of MES cells with significant post-therapy changes (Fig. 2e and Extended Data Fig. 3e). Patients with mutated ALK demonstrated a significantly smaller decrease in the ADRN-baseline and ADRN-proliferating populations and a notable decrease in the MES state after therapy (Fig. 2f), in contrast with the overall trend (Fig. 2e).\"",
+      "data": {
+        "benchmark/scdata/paper1/data/dataset1.h5ad": "snRNA-seq of all cells in high-risk Neuroblastoma before and after chemotherapy",
+        "benchmark/scdata/paper1/data/dataset2.h5ad": "snRNA-seq of neoplastic cells in high-risk Neuroblastoma before and after chemotherapy",
+        "benchmark/scdata/paper1/data/genes_used_to_calculate_signature_scores_for_ADRN-like_and_MES-like_neoplastic_cell_states.txt": "List of genes used to calculate signature scores for ADRN-like and MES_like neoplastic cell states."
+      },
+      "mcq_question": "**Question1:** Based on the dataset analysis, which cell state in neoplastic cells shows a significant increase in proportion after chemotherapy in high-risk neuroblastoma?\nA) ADRN (adrenergic)-proliferating\nB) ADRN (adrenergic)-dopaminergic\nC) ADRN (adrenergic)-baseline\nD) Mesenchymal neoplastic cells\n\n**Answer1:**B,D\n\n\n**Question2:** The data suggest that patients with which genetic mutation show a decrease in mesenchymal cell state frequencies post-therapy, whereas patients without the mutation do not?\nA) Mutated ALK\nB) Mutated TP53\nC) Mutated KRAS\nD) None of the above\n\n**Answer2:** A"
+    },
+    "insight #2": {
+      "summary": "The study reveals that macrophages in the neuroblastoma microenvironment significantly expand post-therapy, adopting pro-tumorigenic phenotypes that may contribute to therapy resistance.",
+      "how": "The authors used single-nucleus RNA sequencing to analyze macrophage populations in neuroblastoma samples before and after chemotherapy. They identified eight macrophage subsets and noted significant shifts in these populations post-therapy, with most subsets expanding except for the pro-inflammatory IL18+ population, which decreased. This expansion towards pro-tumorigenic phenotypes, such as immunosuppressive and angiogenic states, was linked to poorer treatment outcomes. These observations are detailed in the Results section and supported by Figure 4.",
+      "relevant": "\"Importantly, we observed significant shifts in macrophage states between the paired diagnostic and post-therapy samples. The IL18+ population was the only state that was reduced after therapy, whereas all other states except the proliferating and THY1+ state were expanded (Fig. 4d and Extended Data Fig. 8d,e). A predominance of IL18+ macrophages was linked to better treatment responses and fewer adverse clinical events (Extended Data Fig. 8f,g).\"",
+      "data": {
+        "benchmark/scdata/paper1/data/dataset1.h5ad": "snRNA-seq of all cells in high-risk Neuroblastoma before and after chemotherapy",
+        "benchmark/scdata/paper1/data/dataset3.h5ad": "snRNA-seq of Macrophages in high-risk Neuroblastoma before and after chemotherapy"
+      },
+      "mcq_question": "**Question1:** Which macrophage subset is observed to reduce after therapy according to the dataset?\nA) IL18+ macrophages\nB) THY1\u207a macrophages\nC) Proliferating macrophages\nD) VCAN\u207a macrophages\n\n**Answer1:** A"
+    },
+    "insight #6": {
+      "summary": "The study reveals that neuroblastoma neoplastic cells exhibit multiple distinct transcriptomic states that recapitulate developmental processes and can predict clinical outcomes.",
+      "how": "Through single-nucleus RNA sequencing, the authors identified six distinct neoplastic cell states, characterized by ADRN and MES signature scores and differential gene expression. These states were associated with different developmental stages, with MES states enriched in non-neuroblastic phenotypes and ADRN states resembling neuroblast lineages. The study linked these states to clinical outcomes, with more differentiated states predicting better prognosis. These insights are detailed in the Results section and supported by Figure 2.",
+      "relevant": "\"To better understand these cell states, we projected all inferred neoplastic cells onto a single-cell transcriptomic atlas of normal adrenal medullary development7. Consistent with previous studies7,8, neoplastic cells mostly recapitulated neuroblasts and late neuroblasts, indicating a developmentally arrested state. Interestingly, we found a significant increase in additional developmentally arrested phenotypes in post-therapy samples, including late Schwann cell precursors, a bridge cell population, chromaffin cells, late chromaffin cells, and cycling neuroblasts (Extended Data Fig. 4a\u2013c).\"",
+      "data": {
+        "benchmark/scdata/paper1/data/dataset1.h5ad": "snRNA-seq of all cells in high-risk Neuroblastoma before and after chemotherapy",
+        "benchmark/scdata/paper1/data/genes_used_to_calculate_signature_scores_for_ADRN-like_and_MES-like_neoplastic_cell_states.txt": "List of genes used to calculate signature scores for ADRN-like and MES_like neoplastic cell states."
+      },
+      "mcq_question": "**Question1:** How many distinct neoplastic cell states were identified in the dataset?\nA) Four\nB) Five\nC) Six\nD) Seven\n\n**Answer1:** C"
+    }
+  },
+  "paper2": {
+    "insight #1": {
+      "summary": "The study identifies distinct cytokine expression patterns in myocarditis following SARS-CoV-2 infection and COVID-19 vaccination, with interferon-\u03b3 (IFN-\u03b3) being predominant in Post-COVID-19 myocarditis and interleukins IL16 and IL18 being hallmarks of Post-Vaccination myocarditis.",
+      "how": "Using single-nucleus RNA sequencing (snRNA-seq) on left ventricular biopsies, the authors analyzed cytokine expression across different myocarditis conditions. They observed elevated IFN-\u03b3 expression specifically in lymphocytes from Post-COVID-19 patients, while IL16 and IL18 were significantly upregulated in the Post-Vaccination group. This was supported by differential gene expression analysis and pseudo-bulk expression levels of cytokines, as shown in Figure 1f and Extended Data Fig. 3a.",
+      "relevant": "\"We identified distinct cytokine expression patterns, with interferon-\u03b3 playing a key role in Post-COVID-19, and upregulated IL16 and IL18 expression serving as a hallmark of Post-Vaccination myocarditis. ... We determined differentially expressed genes (DEGs) in cardiac tissue using a pseudo-bulk approach that aggregated all nuclei from the same individual (Supplementary Table 2) and detected increased expression of the pro-inflammatory cytokine genes TNF and IFNG across patient groups (Fig. 1f). IFNG was solely expressed in lymphocytes and especially elevated in the Post-COVID-19 and MIS-C groups (Fig. 1f and Extended Data Fig. 3a).\"",
+      "data": {
+        "benchmark/scdata/paper2/data/dataset1.h5ad": "All cells from human cardiac tissue with myocarditis and healthy controls"
+      },
+      "mcq_question": "**Question1:** Based on the dataset analysis, which cytokine is predominantly expressed in lymphocytes from Post-COVID-19 myocarditis patients?\nA) TNF\nB) IL18\nC) IFN-\u03b3\nD) IL16\n\n**Answer1:** C\n\n\n**Question2:** What cytokine expression pattern is a hallmark of Post-Vaccination myocarditis according to the dataset?\nA) Elevated IL16\nB) Elevated IFNG\nC) Elevated TNF\nD) Elevated IL18\n\n**Answer2:** A,D"
+    },
+    "insight #2": {
+      "summary": "Post-COVID-19 myocarditis is characterized by an expansion of cytotoxic CD8+ T cells and natural killer (NK) cells, whereas Post-Vaccination myocarditis shows a higher proportion of CD4+ T cells.",
+      "how": "The authors performed subcluster analyses of lymphoid cells from snRNA-seq data, revealing distinct immune cell compositions in different myocarditis conditions. They found an increased ratio of CD8+ to CD4+ T cells in Post-COVID-19 myocarditis, indicating a cytotoxic immune response. Conversely, Post-Vaccination myocarditis exhibited a higher proportion of CD4+ T cells, aligning with previous reports of CD4+ lymphocytic infiltrates in response to vaccination. These findings are illustrated in Figure 3d and Extended Data Fig. 5a.",
+      "relevant": "\"Within the T cell population, we observed higher CD4+ to CD8+ T cell ratios in Non-COVID-19, and this effect was even more pronounced in Post-Vaccination, aligning with previously reported predominance of cardiac CD4+ lymphocytic infiltrates in response to COVID-19 vaccination11. In contrast, CD8+ T cells dominated in the Post-COVID-19 and MIS-C groups (Fig. 3d).\"",
+      "data": {
+        "benchmark/scdata/paper2/data/dataset1.h5ad": "All cells from human cardiac tissue with myocarditis and healthy controls",
+        "benchmark/scdata/paper2/data/lymph_dataset.h5ad": "Lymphocytes from human cardiac tissue with myocarditis and healthy controls"
+      },
+      "mcq_question": "**Question2:** According to the dataset, which myocarditis condition is associated with a higher CD4+ to CD8+ T cell ratio?\nA) MIS-C (Multisystem Inflammatory Syndrome in Children) myocarditis\nB) Post-COVID-19 myocarditis\nC) Post-Vaccination myocarditis\nD) Non-COVID-19 myocarditis\n\n**Answer2:** C"
+    },
+    "insight #4": {
+      "summary": "Myeloid cell expansion in myocarditis is non-specific to the cause, with similar compositional changes observed across Non-COVID-19, Post-COVID-19, and Post-Vaccination groups.",
+      "how": "The authors characterized myeloid cells using snRNA-seq, identifying various macrophage states and monocytes. Despite differences in the extent of myeloid expansion, similar compositional alterations were found in all myocarditis groups, including increased monocyte-derived macrophages and decreased resident macrophages. This was demonstrated through UMAP embeddings and proportional changes in myeloid cell states, as shown in Figure 2b and Extended Data Fig. 4a.",
+      "relevant": "Despite the varying extent of the overall myeloid expansion (Extended Data Fig. 2d), we observed similar striking compositional alterations in the myeloid populations in Non-Covid-19, Post-COVID-19 and Post-Vaccination groups compared to control (Fig. 2b and Extended Data Fig. 4a).",
+      "data": {
+        "benchmark/scdata/paper2/data/my_dataset.h5ad": "Myeloid cells from human cardiac tissue with myocarditis and healthy controls"
+      },
+      "mcq_question": "**Question2:** The dataset indicates that myeloid cell expansion in myocarditis is characterized by what change in resident macrophages?\n\nA) Increased numbers\n\nB) Decreased numbers\n\nC) No change in numbers\n\nD) Complete elimination of all resident macrophages\n\n**Answer2:** B"
+    },
+    "insight #5": {
+      "summary": "Distinct inflammasome activation pathways are identified in Post-Vaccination myocarditis, with increased expression of NLRP1, NLRP3, and caspases CASP1 and CASP4.",
+      "how": "The study used snRNA-seq to analyze inflammasome-related gene expression in myocarditis conditions. In the Post-Vaccination group, there was a notable increase in the expression of inflammasome components, suggesting a unique inflammatory pathway activation. This was supported by differential expression analysis and pseudo-bulk expression levels, as detailed in Figure 1f and Extended Data Fig. 3c.",
+      "relevant": "\"IL16 and IL18 expression was uniquely increased in the Post-Vaccination group, and expression of inflammasome components such as pattern recognition receptors NLRP1 and NLRP3 and caspases CASP1 and CASP4 necessary for IL18 activation17 were highest in this group (Fig. 1f and Extended Data Fig. 3c).\"",
+      "data": {
+        "benchmark/scdata/paper2/data/dataset1.h5ad": "All cells from human cardiac tissue with myocarditis and healthy controls"
+      },
+      "mcq_question": "**Question1:** Which inflammasome components are notably increased in expression in Post-Vaccination myocarditis according to the dataset?\nA) NLRP1\nB) CASP1\nC)CASP4\nD)NLRP3\n\n**Answer1:** A,B,C,D"
+    },
+    "insight #7": {
+      "summary": "Post-COVID-19 myocarditis is associated with a pronounced interferon-stimulated gene (ISG) expression in multiple cardiac cell types, indicating heightened inflammatory activity.",
+      "how": "The study analyzed gene expression profiles using snRNA-seq, identifying upregulated ISG expression in various cardiac cell types in Post-COVID-19 myocarditis. This suggests an enhanced inflammatory response, supported by gene set enrichment analyses and differential expression results, as shown in Figure 2f and Supplementary Table 3.",
+      "relevant": "Strikingly, in the Post-COVID-19 group, upregulated gene sets related to interferon-\u03b3 (IFN\u03b3) signaling in multiple cell types (Fig. 1h and Supplementary Table 3).",
+      "data": {
+        "benchmark/scdata/paper2/data/dataset1.h5ad": "All cells from human cardiac tissue with myocarditis and healthy controls"
+      },
+      "mcq_question": "**Question1:** Which type of gene expression is upregulated in multiple cardiac cell types in Post-COVID-19 myocarditis?\n\nA) Interferon-stimulated genes (ISGs)\n\nB) Apoptosis-related genes\n\nC) Angiogenesis-related genes\n\nD) Metabolic pathway genes\n\n**Answer1:** A"
+    },
+    "insight #9": {
+      "summary": "Increased angiogenesis-related signaling, including VEGFA, ANGPT, and EPHB, is observed in all myocarditis groups, suggesting active vascular remodeling.",
+      "how": "The authors used snRNA-seq and CellChat analyses to infer cell-cell communication, identifying enhanced angiogenesis-related signaling pathways in myocarditis conditions. Increased VEGFA signaling from cardiomyocytes to endothelial cells and upregulated ANGPT and EPHB signaling were noted, as detailed in Figure 4i and Extended Data Fig. 6m.",
+      "relevant": "\"By examining the expression of genes encoding for receptors and ligands, we inferred cell\u2013cell communication using CellChat and detected increased VEGFA signaling from CMs to ECs in all patient groups (Fig. 4i). ... CellChat analyses furthermore identified increased angiogenesis-related angiopoietin (ANGPT), ephrin B (EPHB) and NOTCH signaling in all patient groups (Fig. 4i).\"",
+      "data": {
+        "benchmark/scdata/paper2/data/dataset1.h5ad": "All cells from human cardiac tissue with myocarditis and healthy controls"
+      },
+      "mcq_question": "**Question1:** What angiogenesis-related signaling pathways are increased in myocarditis conditions according to the dataset?\nA) VEGFA and ANGPT\nB) IFN-\u03b3 and IL10\nC) IL6 and TNF\nD) EPHB and NOTCH\n\n**Answer1:** A,D\n\n\n**Question2:** Based on the dataset, which signaling is enhanced from cardiomyocytes to endothelial cells in myocarditis conditions?\nA) NOTCH signaling\nB) EPHB signaling\nC) ANGPT signaling\nD) VEGFA signaling\n\n**Answer2:** D"
+    }
+  },
+  "paper3": {
+    "insight #5": {
+      "summary": "The study identifies a unique hVAT-specific adipocyte subtype, VA6, characterized by high mitochondrial and ribosomal gene expression, suggesting a specialized metabolic role.",
+      "how": "The authors identified the VA6 cluster in hVAT through snRNA-seq, which showed enrichment in mitochondrial and ribosomal genes. This subtype was further validated by high expression of nuclear-encoded mitochondrial genes and immunofluorescence staining for mitochondrial markers. The findings suggest a specialized role for VA6 in energy metabolism, supported by Figure 5 and supplementary data.",
+      "relevant": "\"The depot-specific cluster VA6 was enriched in mitochondrial and ribosomal genes and processes... VA6 was characterized by relatively high expression of mitochondrial and ribosomal genes or functions, possibly consistent with a high protein translation activity and/or a high mitochondrial content, which characterizes hVAT20... Immunostaining hVAT for the VA6 mitochondrial marker protein, MT-CO2 (Fig. 5j), revealed rare MT-CO2-positive adipocytes...\"",
+      "data": {
+        "benchmark/scdata/paper3/data/dataset2.h5ad": "snRNA-seq of human visceral adipose tissue - all cells",
+        "benchmark/scdata/paper3/data/VA_adipocytes.h5ad": "snRNA-seq of human visceral adipose tissue - adipocytes"
+      },
+      "mcq_question": "**Question1:** What gene expression characteristics define the VA6 adipocyte subtype in human visceral adipose tissue (hVAT)?\nA) High expression of lipid metabolism genes\nB) High expression of mitochondrial genes\nC) High expression of immune response genes\nD) High expression of ribosomal genes\n\n**Answer1:** B,D"
+    }
+  },
+  "paper4": {
+    "insight #1": {
+      "summary": "The study identifies a novel tripotential intermediate progenitor cell (Tri-IPC) subtype in the human neocortex, which is capable of producing GABAergic neurons, oligodendrocyte precursor cells, and astrocytes, highlighting a key cellular mechanism in neurodevelopment.",
+      "how": "The authors used single-nucleus RNA sequencing (snRNA-seq) and chromatin accessibility data to identify and characterize Tri-IPCs. These progenitors were found to express markers indicative of their ability to differentiate into multiple cell types. The lineage-tracing experiments confirmed their tripotency, as Tri-IPCs differentiated into neurons, oligodendrocytes, and astrocytes in vitro and in vivo. This finding was supported by Figures 4 and Extended Data Figure 15, which showed the differentiation potential of these cells.",
+      "relevant": "\"We identified a tripotential intermediate progenitor subtype\u2014tripotential intermediate progenitor cells (Tri-IPCs)\u2014that is responsible for the local production of GABAergic neurons, oligodendrocyte precursor cells and astrocytes. Notably, most glioblastoma cells resemble Tri-IPCs at the transcriptomic level, suggesting that cancer cells hijack developmental processes to enhance growth and heterogeneity.\"",
+      "data": {
+        "benchmark/scdata/paper4/data/dataset1.h5ad": "snMultiome data of the developing human neocortex"
+      },
+      "mcq_question": "**Question1:** Based on the dataset, which cell types can the identified novel tripotential intermediate progenitor cell (Tri-IPCs) differentiate into?\nA) Microglia\nB) GABAergic neurons\nC) Astrocytes\nD) Oligodendrocyte precursor cells\n\n**Answer1:** B,C,D"
+    }
+  },
+  "paper5": {
+    "insight #1": {
+      "summary": "The study identifies two distinct waves of muscle development in human embryonic limbs, each characterized by different cell states and gene expression programs, with musculin (MSC) playing a crucial role in maintaining muscle stem cell identity.",
+      "how": "The authors utilized single-cell RNA sequencing (scRNA-seq) to analyze human embryonic limb samples from post-conception weeks (PCW) 5 to 9. They identified distinct trajectories of muscle cell development, revealing two waves of myogenesis: an embryonic wave characterized by PAX3+ progenitors transitioning to embryonic myoblasts and myocytes, and a fetal wave involving PAX7+ progenitors. MSC was identified as a key transcriptional repressor in maintaining muscle stem cell identity through knockdown experiments that showed upregulation of late myocyte genes upon MSC depletion. This finding is supported by Figure 4 and related text in the Results section.",
+      "relevant": "\"To dissect these developmental trajectories in humans, we re-embedded muscle cells using diffusion mapping combined with partition-based graph abstraction and force-directed graph. Three distinct trajectories with an origin in PAX3+SkMP emerged (Fig. 4a)... The final trajectory (labelled second myogenesis) connects cell states that express PAX7 first to fetal myoblasts (MyoB2), then to early fetal myocytes (MyoC2), and finally to mature fetal myocytes (Fig. 4a,c and Extended Data Fig. 8b)... The most prominent repressor, MSC (also known as musculin, ABF1 or MyoR) encodes a basic helix\u2013loop\u2013helix transcription factor that has been shown to inhibit the ability of MyoD to activate myogenesis in 10T1/2 fibroblasts64 and rhabdomyosarcoma cells65... To test whether human MSC also has a role in repressing PAX7+ progenitor maturation, we knocked down MSC in primary human embryonic limb myoblasts. Quantitative PCR with reverse transcription (RT\u2013qPCR) results showed upregulation of late myocyte genes, suggesting that it has a key role in maintaining limb muscle progenitor identity (Fig. 4g).\"",
+      "data": {
+        "benchmark/scdata/paper5/data/dataset2.h5ad": "scRNA-seq data for human limb"
+      },
+      "mcq_question": "**Question1:** Based on the dataset, which progenitor cells are involved in the embryonic wave of myogenesis?\nA) PAX3+ progenitors\nB) PAX7+ progenitors\nC) MSC+ progenitors\nD) MyoD+ progenitors\n\n**Answer1:** A\n\n\n**Question2:** Based on the dataset, which progenitor cells are involved in the fetal wave of myogenesis?\nA) PAX3+ progenitors\nB) PAX7+ progenitors\nC) MSC+ progenitors\nD) MyoD+ progenitors\n\n**Answer2:** B\n\n\n"
+    },
+    "insight #5": {
+      "summary": "The study uncovers transcription factor networks specific to mesenchymal lineage progression, highlighting key regulators such as MEIS2, LHX2, and HOXA13.",
+      "how": "Using scRNA-seq data, the authors inferred transcription factor networks associated with mesenchymal lineage progression. They identified key transcription factors such as MEIS2 in proximal mesenchyme, LHX2 and MSX1 in distal mesenchyme, and HOXA13 in the autopod. These findings were supported by regulon analysis using SCENIC, as detailed in Figure 3 and the Results section.",
+      "relevant": "\"We next looked for modules of active transcription factor networks associated with progression through each lineage (see Methods; Fig. 3c,d, Supplementary Table 4 and Extended Data Fig. 7a,b)... The distal mesenchyme showed activation of LHX2, MSX1 and MSX2, as previously described in the mouse, as well as HOXA13, which defines the autopod38,39. HIC1 was predicted to have activity in several mesenchymal populations (Fig. 3c,d).\"",
+      "data": {
+        "benchmark/scdata/paper5/data/dataset2.h5ad": "scRNA-seq data for human limb",
+        "benchmark/scdata/paper5/data/scenic_analysis_LPM_TFs.csv": "SCENIC scores for LPM (lateral plate mesodermal).",
+        "benchmark/scdata/paper5/data/scenic_analysis_SkM_TFs.csv": "SCENIC scores for SkM (skeletal muscle)."
+      },
+      "mcq_question": "**Question1:** Which transcription factor is identified in the dataset as being active in the distal mesenchyme?\nA) WT1\nB) HOXA11\nC) SOX9\nD) LHX2\n\n**Answer1:** D"
+    }
+  },
+  "paper6": {
+    "insight #1": {
+      "summary": "CD206+ macrophages in the LP engage in a tolerogenic interaction with eTreg cells, mediated by specific receptor-ligand pairs.",
+      "how": "The authors employed CellPhoneDB analysis to identify significant receptor-ligand interactions between eTreg cells and other cell types in the LP. They found that CD206+ macrophages interact with eTreg cells through IL-10 and other signaling pathways. This was supported by in vivo imaging showing eTreg cells in close proximity to CD206+ macrophages, suggesting a spatial and functional interaction crucial for maintaining gut homeostasis.",
+      "relevant": "Because IL-10 and other STAT3-activating cytokines are key to controlling homeostasis and inflammation in the intestine, we performed a search of STAT3-dependent cytokine genes across the most abundant myeloid and lymphoid subsets in the tissue. We found upregulated expression of the pro-inflammatory cytokine gene Il6 in IL-1\u03b2+CD103+SIRP\u03b1+ dendritic cells resident in the LA (Fig. 3g). By contrast, the LP was dominated by Il10, which is expressed primarily by eTreg cells, with some expression in CD206+ and IL-1\u03b2+ macrophage subsets (Fig. 3g).",
+      "data": {
+        "benchmark/scdata/paper6/data/cxg_data.h5ad": "scRNA-seq dataset of T cells isolated from the caecum, small\u2011intestine lamina propria, mesenteric lymph node, and Peyer\u2019s patches"
+      },
+      "mcq_question": "**Question2:** The dataset suggests that which cell type primarily expresses Il10 in the lamina propria (LP)?\nA) CD103+SIRP\u03b1+ dendritic cells\nB) eTreg cells\nC) IL-1\u03b2+ macrophage subsets\nD) CD206+ macrophages\n\n**Answer2:** B"
+    },
+    "insight #2": {
+      "summary": "Effector Treg cells in the LP exhibit a unique transcriptional profile characterized by the expression of suppressor-associated genes like Ctla4, Maf, and Il10.",
+      "how": "Single-cell RNA sequencing (scRNA-seq) was used to analyze the transcriptional states of Treg cells in different gut compartments. The authors identified distinct transcriptional profiles for eTreg cells in the LP, marked by the expression of genes associated with suppressor functions.",
+      "relevant": "Subclustering of Treg cells revealed three subpopulations that were differentially distributed between secondary lymphoid organs and tissue (Fig. 2c). To highlight their distinct functional phenotype and spatial segregation, we refer to lymphoid-associated Treg cells as central Treg (cTreg) cells and tissue resident Treg cells as effector eTreg cells. cTreg cells express Tcf7 and Ccr7, tissue eTreg cells express the effector-associated molecules Ctla4, Maf, Tnfrsf4 and Il10, and proliferating Treg cells express histone genes (Fig. 2c and Extended Data Fig. 6a).",
+      "data": {
+        "benchmark/scdata/paper6/data/cxg_data.h5ad": "scRNA-seq dataset of T cells isolated from the caecum, small\u2011intestine lamina propria, mesenteric lymph node, and Peyer\u2019s patches",
+        "benchmark/scdata/paper6/data/Mouse_Rb_proteins_geneList_ribosome.med.miyazaki-u.ac.jp.txt": "curated gene list of mouse ribosomal protein genes (both small subunit Rps and large subunit Rpl genes)"
+      },
+      "mcq_question": "**Question2:** Analysis of the dataset suggests that effector eTreg cells in the lamina propria (LP) are distinct from central cTreg cells based on the high expression of which gene?\n\nA) Ctla4\n\nB) Ccr7\n\nC) Tcf7\n\nD) Histone genes\n\n**Answer2:** A"
+    }
+  },
+  "paper7": {
+    "insight #3": {
+      "summary": "The study identifies a significant decrease in ribosome biogenesis genes in muscle stem cells (MuSCs) with age, which is associated with reduced MuSC activation and increased senescence.",
+      "how": "The authors used single-cell RNA sequencing (scRNA-seq) to profile 17,528 high-quality MuSCs, identifying four subpopulations. Gene Ontology enrichment analysis revealed that the TNFRSF12A+ (TNF+) MuSC subpopulation showed a notable decrease in ribosome biogenesis gene expression with age. This was confirmed by fluorescence-activated cell sorting (FACS) and primary myoblast culture experiments, which showed decreased ribosome assembly genes at both transcriptional and translational levels in aged individuals. The decline in ribosome biogenesis was linked to increased expression of senescence markers, suggesting a mechanism for MuSC aging. This data is supported by Figure 2 and Extended Data Figure 3.",
+      "relevant": "The putative activated TNF+ state showed the most notable decrease in abundance during aging (Fig. 2c), indicating a decline in MuSC activation, one of the hallmarks of MuSC senescence in rodent models. The TNF+ state also exhibited the greatest decline in ribosome biogenesis gene set expression, including ribosome assembly genes and POLR1D, a key subunit forming the assembly platform for RNA polymerase I (Fig. 2d,e and Supplementary Tables 2 and 3). Using a primary myoblast culture model, we confirmed a decrease in ribosome assembly genes at both transcriptional and translational levels in aged compared to young individuals (Fig. 2f-j and Extended Data Fig. 3f). Notably, myoblast cultures from aged patients displayed several features of senescence, including upregulation of cyclin inhibi-tors CDKN2A and TP53 (Fig. 2g), \u03b2-galactosidase activity (Extended Data Fig. 3g) and senescence-associated secretory phenotype (SASP; Extended Data Fig. 3h)",
+      "data": {
+        "benchmark/scdata/paper7/data/processed_MuSC_data.h5ad": "Mouse muscle stem cells (MuSC) data"
+      },
+      "mcq_question": "**Question1:** Based on the dataset, which subpopulation of muscle stem cells (MuSCs) shows a notable decrease in ribosome biogenesis gene expression with age?\nA) POLR1D+ MuSCs\nB) TP53+ MuSCs\nC) TNFRSF12A+ (TNF+) MuSCs\nD) CDKN2A+ MuSCs\n\n**Answer1:** C"
+    },
+    "insight #4": {
+      "summary": "Aging in human skeletal muscle is characterized by an increase in immune cell infiltration, particularly B cells, T cells, and NK cells, while vascular and Schwann cells decrease.",
+      "how": "The authors performed scRNA-seq and snRNA-seq on intercostal muscle biopsies from young and aged donors, identifying major cell types. They observed a significant enrichment of immune cells in aged muscle, including B cells, T cells, and NK cells, while vascular cells (such as smooth muscle cells and endothelial cells) and Schwann cells were depleted. This was confirmed by immunofluorescence staining and RareCyte 15-plex panel analysis, which showed increased immune cell presence and decreased vascularization. These findings are detailed in Figure 1 and Extended Data Figures 1 and 2.",
+      "relevant": "We next compared the broad cellular makeup of young with aged muscle. Muscle samples from aged donors were strongly enriched for subtypes of immune cells, including natural killer (NK) cells, T cells,  B cells (B cell, B-plasma) and mast cells, whereas they were depleted for vascular (SMCs, arterial endothelial cells and capillary endothelial cells) and Schwann cells (Fig. 1d, Extended Data Fig. 2a-c and Methods). The increase in B cells and T cells is consistent with studies in the aging mouse brain, liver and adipose tissue as well as a recent report highlighting age-related immune infiltration in multiple human tissues.",
+      "data": {
+        "benchmark/scdata/paper7/data/processed_human_muscle_data.h5ad": "Human muscle data"
+      },
+      "mcq_question": "**Question1:** Analysis of the dataset suggests an increase in which cell types in aged human skeletal muscle?\nA) B cells\nB) Schwann cells\nC) T cells\nD) Vascular cells\n\n**Answer1:** A,C\n\n\n**Question2:** What does the dataset indicate about the presence of vascular and Schwann cells in aged muscle?\nA) Schwann cells increase while vascular cells decrease with age\nB) Both vascular and Schwann cells increase with age\nC) Vascular cells increase while Schwann cells decrease with age\nD) Both vascular and Schwann cells decrease with age\n\n**Answer2:** D"
+    },
+    "insight #5": {
+      "summary": "The study identifies a novel neuromuscular junction (NMJ) accessory population that increases with age and may aid in NMJ re-innervation.",
+      "how": "Using integrated scRNA-seq and snRNA-seq data, the authors identified a previously unreported NMJ accessory population characterized by specific marker genes related to synapse formation. GO analysis showed enrichment in synapse organization and axon development terms. Functional experiments demonstrated that knockdown of NMJ accessory markers led to decreased acetylcholine receptor (AChR) cluster formation, suggesting a role in NMJ maintenance. The increase in NMJ accessory with age was confirmed by RNAscope and immunofluorescence staining. This is supported by Figure 3 and Extended Data Figure 4.",
+      "relevant": "In the present study, we identified a previously unreported NMJ accessory population that expressed marker genes related to synapse formation that were distinct from NMJ nuclei markers (Fig. 3j and Supplementary Table 4). As indicated by GO analysis, NMJ accessory was enriched in 'synapse organization' and 'axon development' terms, possibly promoting synapse formation (Extended Data Fig. 4g). Among NMJ accessory marker genes were GRIA2, encoding the key subunit of ionotropic glutamate receptor; EFNA5, encoding an essential ligand involved in axon guidance to the myotube during limb development; and SORBS2, encoding an adapter protein involved in AChR cluster formation in mouse. pySCENIC transcription factor activity inference further confirmed the distinction between NMJ and NMJ accessory, highlighting that the ETV4 and ETV5 (ref. 55) Transcription factors known to induce synapse formation were almost inactive in NMJ accessory (Extended Data Fig. 4i,j). Interestingly, NMJ accessory increased with age, both in our dataset and in publicly available human quadriceps nuclei data (Fig. 3e and Extended Data Fig. 5b,c).",
+      "data": {
+        "benchmark/scdata/paper7/data/processed_myonuclei_data.h5ad": "Muscle nuclei data"
+      },
+      "mcq_question": "**Question1:** What does the dataset suggest about the role of the novel neuromuscular junction (NMJ) accessory population identified in the study?\nA) It is unrelated to NMJ re-innervation\nB) It decreases with age and inhibits NMJ re-innervation\nC) It decreases with age and promotes NMJ re-innervation\nD) It increases with age and may aid in NMJ re-innervation\n\n**Answer1:** D\n\n\n**Question2:** Based on the dataset, which marker genes characterize the novel neuromuscular junction (NMJ) accessory population?\nA) POLR1D\nB) EFNA5\nC) GRIA2\nD) TNFRSF12A\n\n**Answer2:** B,C"
+    },
+    "insight #6": {
+      "summary": "Aging muscle shows a shift in myonuclear composition, with slow-twitch myofibers acquiring fast-twitch characteristics, potentially as a compensatory mechanism.",
+      "how": "The authors used integrated scRNA-seq and snRNA-seq to analyze myonuclei from young and aged muscle, identifying changes in myonuclear composition. They observed an increase in fast-twitch markers within slow-twitch myofibers in aged muscle, indicating a 'slow-to-fast' myonuclear shift. This was supported by RNAscope and immunofluorescence staining, which showed fast-type mRNAs in slow-twitch myofibers. These findings are detailed in Figure 4 and Extended Data Figure 6.",
+      "relevant": "At the nuclei level, MYH1+ nuclei (type IIX) had a tendency to increase (Fig. 4e and Extended Data Fig. 6f), even though the type IIX MFs that are expected to contain these nuclei almost disappeared with age. This may point to initiation or increase of MYH1 expression in other MF types (such as type I (MYH7+) and type II (MYH2+)) and acquisition of an early hybrid phenotype. By combining staining of MYH7 protein together with MYH1 and MYH2 RNA (Extended Data Fig. 6g), we observed a number of nuclei in aged slow-twitch (MYH7+) MFs expressing fast-type mRNAs MYH2 and MYH1 (Fig. 4f and Extended Data Fig. 7a)",
+      "data": {
+        "benchmark/scdata/paper7/data/processed_myonucleicells_data.h5ad": "Muscle nuclei and cells data"
+      },
+      "mcq_question": "**Question1:** What does the dataset suggest about the shift in myonuclear composition in aged muscle?\nA) Myonuclear composition remains unchanged with age\nB) Slow-twitch myofibers acquire fast-twitch characteristics\nC) Fast-twitch myofibers acquire slow-twitch characteristics\nD) Slow-twitch myofibers lose their characteristics entirely\n\n**Answer1:** B\n\n\n**Question2:** Which type of myofiber shows an increase in fast-type mRNA expression in aged muscle according to the dataset?\nA) Type IIB myofibers\nB) Type IIX myofibers\nC) Type I myofibers\nD) Type IIA myofibers\n\n**Answer2:** C"
+    },
+    "insight #7": {
+      "summary": "The study identifies a compensatory mechanism in aged muscle involving MYH8+ myocytes, which may contribute to fast-twitch myofiber regeneration.",
+      "how": "The authors used trajectory analysis to identify MYH8+ myocytes as an intermediate state in the transition from MuSCs to myofibers, predominantly connecting to fast-twitch myofibers. They observed an increase in MYH8+ myocytes with age, supported by immunofluorescence staining showing increased MYH8 expression in aged muscle. This suggests a role in fast-twitch myofiber regeneration. These findings are detailed in Figure 4 and Extended Data Figure 7.",
+      "relevant": "MYH8+ myocyte-mediated regeneration may represent another mechanism countering fast-twitch MF loss. In particular, MYH8+ myocytes were an intermediate state in the trajectory from MuSC to MF, predominantly connecting to fast-twitch MF (Extended Data Fig. 7d,e). This is consistent with fetal MYH8 being described as a marker of muscle regeneration. MYH8+ myocytes also expressed a much higher level of fast-twitch rather than slow-twitch MF structural genes and increased in proportion with age (Fig. 4h,i and Supplementary Table 5), as recently reported.",
+      "data": {
+        "benchmark/scdata/paper7/data/processed_myonucleicells_data.h5ad": "Muscle nuclei and cells data"
+      },
+      "mcq_question": "**Question1:** What role do MYH8+ myocytes play in aged muscle, according to the dataset?\nA) They primarily contribute to slow-twitch myofiber regeneration\nB) They act as an intermediate state contributing to fast-twitch myofiber regeneration\nC) They remain an immature myocyte population with no clear regenerative role\nD) They predominantly differentiate into fibro-adipogenic progenitors rather than myofibers.\n\n**Answer1:** B"
+    },
+    "insight #8": {
+      "summary": "The study demonstrates that aging leads to a decrease in vascularization in skeletal muscle, particularly affecting smooth muscle cells and pericytes.",
+      "how": "The authors used scRNA-seq and snRNA-seq to analyze vascular cell types in young and aged muscle. They found a significant decrease in smooth muscle cells and pericytes with age, confirmed by immunofluorescence staining showing reduced capillary presence around myofibers. This suggests a decline in tissue vascularization, impacting muscle function. These findings are detailed in Figure 5 and Extended Data Figure 9.",
+      "relevant": "Most of the SMC populations, pericytes and some arterial and capillary endothelial cells tended to decrease with age (Fig. 5c). This was confirmed by a reduction of capillaries surrounding MFs using both immunofluorescence staining of ACTA2 (Fig. 5i,j) and RareCyte staining of CD31 (Extended Data Fig. 9d). Although we confirm a general decline in tissue vascularization as previously described, our findings suggest that SMCs and pericytes are the most affected as opposed to endothelial subset.",
+      "data": {
+        "benchmark/scdata/paper7/data/processed_human_muscle_data.h5ad": "Human muscle data"
+      },
+      "mcq_question": "**Question2:** Which vascular cell types generally tend to decrease with age according to the dataset?\nA) Only arterial and capillary endothelial cells\nB) Endothelial and Schwann cells\nC) Smooth muscle cells and pericytes\nD) Smooth muscle cells and Schwann cells\n\n**Answer2:** C"
+    },
+    "insight #9": {
+      "summary": "The study reveals that aging muscle exhibits increased expression of pro-inflammatory cytokines IL6 and decreased expression of IGF1, indicating impaired muscle repair mechanisms.",
+      "how": "The authors performed differential gene expression analysis on aging muscle microenvironment cells, identifying increased IL6 expression in multiple cell types and decreased IGF1 expression in fibroblasts. This was supported by pathway enrichment analysis showing reduced pro-growth signaling pathways. These findings suggest impaired muscle repair mechanisms with age. These findings are detailed in Figure 6 and Supplementary Table 7.",
+      "relevant": "Interestingly, we observed an increase in pro-inflammatory IL6 within multiple vascular (SMCs, pericytes and a trend in arterial endothelial cells) and stromal cells (tenocytes and fibroblasts) of both species (Fig. 6e). The increased production of IL-6 by fibroblasts was reported to inhibit IGF-1 (ref. 71), an important pro-growth factor that facilitates muscle regeneration. Indeed, IGF-1 expression was significantly decreased in fibroblasts in both species (Fig. 6e), indicating a reduction of muscle repair in aging.",
+      "data": {
+        "benchmark/scdata/paper7/data/processed_human_muscle_data.h5ad": "Human muscle data"
+      },
+      "mcq_question": "**Question2:** Based on the dataset, which cell types show increased IL6 expression in aging muscle?\nA) Muscle stem cells (MuSCs) and myofibers\nB) Fibroblasts and Schwann cells\nC) Myocytes and endothelial cells\nD) Vascular and stromal cells\n\n**Answer2:** D"
+    }
+  },
+  "paper8": {
+    "insight #12": {
+      "summary": "Dietary challenges reveal that enterocyte domains exhibit unique transcriptional responses to nutrient changes, supporting their specialized roles in metabolism.",
+      "how": "The authors conducted dietary challenge experiments by feeding mice different diets (high-fat, high-carbohydrate, and standard chow) and analyzing the transcriptional responses of enterocytes. They observed that domain C expanded in response to a high-carbohydrate diet, while domains A/B and D were associated with lipid metabolism. These findings highlight the functional specialization of enterocyte domains in nutrient absorption.",
+      "relevant": "These functional analyses suggest that the highest levels of lipid and carbohydrate metabolism occur in distinct domains when mice are fed standard chow: fatty acid metabolism most prominently in domains A and B, phospholipid metabolism in domain D, and carbohydrate absorption broadly across the intestine but peaking in domain C. We hypothesized that enterocytes within these domains would differentially upregulate transcripts encoding the enzymes, receptors and/or binding proteins needed to absorb an increased lipid or carbohydrate dietary load.",
+      "data": {
+        "benchmark/scdata/paper8/data/mouse_data.h5ad": "Epithelial cells collected from 30 segments across the proximal (1) to distal (30) ends of the mouse small intestine.",
+        "benchmark/scdata/paper8/data/domain_mapping.json": "Domain names as keys mapped to segments available in the mouse dataset."
+      },
+      "mcq_question": "**Question1:** What transcriptional response does the dataset suggest domain C enterocytes have to a high-carbohydrate diet?\n\nA) Domain C enterocytes decrease in number\n\nB) Domain C enterocytes show no change\n\nC) Domain C enterocytes expand\n\nD) Domain C enterocytes switch to lipid metabolism\n\n**Answer1:** C\n\n**Question2:** According to the dataset, which domains are associated with lipid metabolism when mice are fed a standard chow diet?\n\nA) Domains A/B and D\n\nB) Domain C only\n\nC) Domain E only\n\nD) All domains equally\n\n**Answer2:** A"
+    }
+  },
+  "paper9": {
+    "insight #14": {
+      "summary": "The study identifies a significant doubling of immune cells in the aged ovary, with lymphocyte proportions increasing the most, which is confirmed by flow cytometry.",
+      "how": "The authors performed single-cell RNA sequencing (scRNA-seq) on ovarian tissue from young (3-month-old) and aged (9-month-old) mice. They observed a more than twofold increase in immune cells in the aged ovaries. This was further validated by flow cytometry, which confirmed the increased percentage and number of CD90+ cells (T cells and innate lymphoid cells) in aged ovaries. The authors used UMAP plots to visualize these changes, and the findings are detailed in Figure 2 and Supplementary Figure 1e.",
+      "relevant": "Advancing age changed ovarian cellularity in our analyses (Fig. 2a,b and Supplementary Fig. 1e). The percentage of GCs was lower in 9-month-old ovaries, which can be explained by both declines in  the number of primordial and tertiary follicles and a trending decline in secondary follicles observed in the aged mice (Fig. 2c-e). The most marked change in ovarian cellularity with advancing age was the greater than twofold increase in immune cells (Fig. 2a,b and Supplementary Fig. 1e) ... To confirm our transcriptional findings related to ovarian immune cell accumulation, we performed high-dimensional flow cytometry to identify age-related differences in the fraction of distinct immune cell types within the ovary. We first assessed the percentage and total number of broadly defined immune cell types, including B cells (CD19+), T cells and innate lymphoid cells (CD90+) and myeloid cells (CD11b+). We observed a higher percentage and number of CD90+ cells (T cells and innate lymphoid cells) in aged ovaries (Fig. 3e,f and Supplementary Fig. 4a), which aligns with the scRNA-seq findings.",
+      "data": {
+        "benchmark/scdata/paper9/data/data.h5ad": "A single-cell atlas of the aging mouse ovary"
+      },
+      "mcq_question": "**Question1:** Based on the dataset, which cell type shows a significant increase in the aged ovaries?\nA) Myeloid cells (CD11b+)\nB) Epithelial cells\nC) Granulosa cells\nD) CD90+ cells (T cells and innate lymphoid cells)\n\n**Answer1:** D"
+    },
+    "insight #15": {
+      "summary": "Type 1 and Type 17 lymphoid cells significantly increase in the aged ovary, suggesting a role in chronic inflammation and fibrosis.",
+      "how": "The authors performed subclustering of immune cells and identified 13 immune subclusters. They found that the most significant increases with age were in Type 1 and Type 17 lymphoid cells, including CD8+ T cells, Type 1 NKT cells, and Type 17 \u03b3\u03b4T cells. These findings were confirmed by flow cytometry and are detailed in Figure 3 and Supplementary Figure 4.",
+      "relevant": "Following observation of the increased proportion of immune cells within the aged ovary, we performed subclustering of immune cells  to determine which specific populations were changed with aging  (Fig. 3a). Following reclustering, the original immune cell CLUs separated into 13 SCLs (Fig. 3b). Cell type identification for each SCL was performed based on known gene expression profiles and, with the help of databases Cellmarker2.0 (ref. 36) and ImmGen, with the representative genes described in Fig. 3c. All markers for immune SCLs are listed in Supplementary Data 1. Because the overall immune cell proportion doubled from 3 to 9 months of age, percentages of total cells in each SCL were assessed and compared by age. Intriguingly, cell types showing the greatest increase with age were lymphoid, including B cells, conventional T cells and innate-like T cells. The biggest difference in abundance with age was in a SCL containing Type 1 lymphoid cells, as defined by the expression of Tbx21 (ref. 38) and Ifng.",
+      "data": {
+        "benchmark/scdata/paper9/data/data.h5ad": "A single-cell atlas of the aging mouse ovary"
+      },
+      "mcq_question": "**Question1:** Which lymphoid cell types are found to increase significantly in the aged ovaries according to the dataset?\nA) Type 2 cells\nB) Type 17 cells\nC) Regulatory T cells\nD) Type 1 cells\n\n**Answer1:** B,D"
+    },
+    "insight #16": {
+      "summary": "Theca cells in aged ovaries show upregulation of fibrogenesis-related pathways, suggesting an early role in collagen production and deposition.",
+      "how": "Using scRNA-seq and Ingenuity Pathway Analysis (IPA), the authors identified age-related changes in theca cells, including significant upregulation of fibrogenesis-related pathways such as TGFB1, TGFB2, and SMAD3. These findings suggest that theca cells may be early contributors to ovarian fibrosis. The results are presented in Figures 5 and 6.",
+      "relevant": "In contrast to fibroblast-like cells, TCs showed a significant upregulation in several upstream regulators of fibrogenesis including TGFB1, TGFB2 and SMAD3 (Fig. 6c), which suggests that TCs may be one of the earliest cell types involved in generation of the signaling cascade for collagen production and deposition.",
+      "data": {
+        "benchmark/scdata/paper9/data/data.h5ad": "A single-cell atlas of the aging mouse ovary"
+      },
+      "mcq_question": "**Question1:** Based on the dataset analysis, which pathway is significantly upregulated in theca cells from aged ovaries?\n\nA) Apoptosis-related pathways\n\nB) Fibrogenesis-related pathways\n\nC) Inflammatory response pathways\n\nD) Cell cycle regulation pathways\n\n**Answer1:** B"
+    },
+    "insight #17": {
+      "summary": "Vascular endothelial cells in aged ovaries exhibit increased DNA damage regulation and markers of cellular senescence.",
+      "how": "The authors performed subclustering of endothelial and epithelial cells and found that vascular endothelial cells showed modest increases in DNA damage regulation pathways and upstream regulators of cellular senescence, such as TP53, CDKN1A, and CDKN2A. These findings are detailed in Figures 8d-f.",
+      "relevant": "The only epithelial/endothelial SCL that showed age-related changes in the pathway analyses was the vascular endothelium; this SCL was found to have modestly increased DNA damage regulation (Fig. 8d). Another interesting observation was that upstream regulators of cellular senescence (TP53, CDKN1A and CDKN2A) were found to be increased with aging in vascular endothelial cells (Fig. 8e)",
+      "data": {
+        "benchmark/scdata/paper9/data/data.h5ad": "A single-cell atlas of the aging mouse ovary"
+      },
+      "mcq_question": "**Question1:** Which markers of cellular senescence are increased in vascular endothelial cells of aged ovaries?\nA) NF-kB and RELA\nB) TP53 and CDKN2A\nC) AKT1 and MTOR\nD) MYC and BCL2\n\n**Answer1:** B\n\n\n**Question2:** What cellular process is increased in vascular endothelial cells of aged ovaries according to the dataset?\nA) Lipid metabolism\nB) Apoptosis regulation\nC) DNA damage regulation\nD) Protein synthesis\n\n**Answer2:** C"
+    }
+  },
+  "paper10": {
+    "insight #20": {
+      "summary": "AD-specific microglial states are characterized by unique transcriptional profiles, including the upregulation of amyloid-processing genes, which may contribute to disease resilience.",
+      "how": "The authors identified an AD-specific microglial state using snRNA-seq, characterized by the upregulation of genes involved in amyloid processing and oxidative stress buffering. This state was validated by immunohistochemistry and genetic risk enrichment analyses, as detailed in Figures 2 and 6.",
+      "relevant": "Enriched pathways in BA4_MIC-7 included amyloid processing, cellular buffering of oxidative stress, and chaperone-mediated autophagy (Figure 2E), consistent with their role in resilience",
+      "data": {
+        "benchmark/scdata/paper10/data/data.h5ad": "Human brain snRNA-seq"
+      },
+      "mcq_question": "**Question1:** Which transcriptional profile is upregulated in the AD-specific microglial state identified in the dataset?\nA) Tau phosphorylation genes\nB) Amyloid-processing genes\nC) Neuronal apoptosis genes\nD) Synaptic pruning genes\n\n**Answer1:** B"
+    },
+    "insight #21": {
+      "summary": "The study reveals that bvFTD-specific oligodendrocyte states are associated with pro-inflammatory signaling, potentially contributing to disease pathology.",
+      "how": "Using snRNA-seq, the authors identified bvFTD-specific oligodendrocyte states with upregulated pro-inflammatory genes. These findings were supported by differential expression analyses and protein-protein interaction networks, as detailed in Figures 1 and S7.",
+      "relevant": "One MICs population was most enriched in bvFTD in the motor cortex and to a lesser extent in PSP, but not AD (BA4_MIC-1; Figures S4F-S4I). These ATP2C1- and SORL1-expressing MICs uniquely upregulated pro-inflammatory signals, such as NAIP, STK3, and SERPINL1 in bvFTD cases (Figure S7G; Table S5) and were abundant in BA4 and INS, vulnerable regions in bvFTD (Table S4).",
+      "data": {
+        "benchmark/scdata/paper10/data/data.h5ad": "Human brain snRNA-seq"
+      },
+      "mcq_question": "**Question1:** Which cell type is associated with upregulated pro-inflammatory genes in bvFTD according to the dataset?\nA) Astrocytes\nB) Oligodendrocytes\nC) Microglia\nD) Neurons\n\n**Answer1:** B\n\n\n**Question2:** The dataset analysis suggests that which pro-inflammatory genes are upregulated in bvFTD-specific oligodendrocyte states?\nA) NAIP, STK3, SERPINL1\nB) APOE, SORL1, ATP2C1\nC) APP, PSEN1, MAPT\nD) TREM2, CD33, CLU\n\n**Answer2:** A"
+    }
+  },
+  "paper11": {
+    "insight #22": {
+      "summary": "The study identifies a generalized inflammatory response across all placental lineages upon exposure to the pathogens Plasmodium falciparum, Listeria monocytogenes, and Toxoplasma gondii, which could compromise placental function and contribute to pregnancy complications.",
+      "how": "Using single-cell RNA sequencing (scRNA-seq), the authors profiled placental explants exposed to the pathogens and observed significant upregulation of inflammatory cytokines and chemokines such as CXCL3, CXCL8, CCL20, CCL4, and CCL3 across various placental cell types. This response was confirmed by single-molecule fluorescent in situ hybridization (smFISH) and protein immunoassays, which validated the upregulation of these inflammatory markers at the tissue level. The findings are detailed in the Results section and supported by Figures 2A and 2B.",
+      "relevant": "We interrogated the responses of all placental lineages to the three pathogens at 24 hpi. We identified a cross-lineage enrichment in inflammatory responses, cellular chemotaxis, and angiogenesis programs (Figures 2A, 2B, and S5B). In the case of P. falciparum infection, this response is shared by trophoblasts and cells that cannot be directly infected, including fibroblasts, endothelial cells, and HBCs. Cytokines and chemokines such as CXCL3, CXCL8, CCL20, CCL4, and CCL3 were significantly upregulated by the three pathogens in trophoblasts (Figure 2B). This upregulation was also observed in the other placental lineages (immune, endothelial, and stroma), aside from T. gondii infection, where the increase did not pass the significance threshold (adjusted p < 0.05) in all these lineages (Figure 2B).",
+      "data": {
+        "benchmark/scdata/paper11/data/data.h5ad": "Placenta infection data (Human)"
+      },
+      "mcq_question": "**Question1:** Based on the dataset, which cytokines and chemokines are significantly upregulated in trophoblasts upon exposure to the pathogens Plasmodium falciparum, Listeria monocytogenes, and Toxoplasma gondii?\nA) CXCL3, CXCL8\nB) CCL20, CCL4\nC) IFN-\u03b3, TNF-\u03b1\nD) IL-10, IL-12\n\n**Answer1:** A,B\n\n\n**Question2:** What does the dataset suggest about the inflammatory response in placental lineages upon exposure to the pathogens Plasmodium falciparum, Listeria monocytogenes, and Toxoplasma gondii?\nA) It is generalized across all placental lineages.\nB) It is absent in fibroblasts.\nC) It is specific to endothelial cells.\nD) It is limited to trophoblasts only.\n\n**Answer2:** A"
+    },
+    "insight #23": {
+      "summary": "Hofbauer cells (HBCs) exhibit pathogen-specific responses, with P. falciparum triggering pro-inflammatory cytokine expression and L. monocytogenes inducing antibacterial responses.",
+      "how": "The authors used scRNA-seq to analyze HBC responses to different pathogens. In P. falciparum-infected explants, HBCs upregulated pro-inflammatory cytokines such as IL-18, TNF, and IL-6, and activated the NF-kB pathway. In contrast, L. monocytogenes exposure led to the upregulation of antibacterial genes like TLR2 and S100A8. These findings are supported by heatmaps showing differential gene expression and are discussed in the Results section, particularly in Figures 3F, 3G, and 4A.",
+      "relevant": "Although P. falciparum does not cross the placenta, it induced the upregulation of pro-inflammatory cytokines IL-18, tumor necrosis factor (TNF), and IL-6 in HBCs (Figure 3F). The cognate receptors of these cytokines were also expressed in HBCs. In response to L. monocytogenes, HBCs upregulated TLR2, a pathogen-recognition receptor crucial for activating the innate immune response against this bacteria (Figure 4A).",
+      "data": {
+        "benchmark/scdata/paper11/data/data.h5ad": "Placenta infection data (Human)"
+      },
+      "mcq_question": "**Question1:** What does the dataset indicate about the response of Hofbauer cells (HBCs) to P. falciparum infection?\nA) Downregulation of pro-inflammatory cytokines\nB) Upregulation of antibacterial genes like TLR2\nC) Upregulation of pro-inflammatory cytokines such as IL-18 and TNF\nD) Downregulation of antibacterial genes like TLR2\n\n**Answer1:** C\n\n\n**Question2:** According to the dataset, how do Hofbauer cells (HBCs) respond to L. monocytogenes exposure?\nA) Upregulation of pro-inflammatory cytokines\nB) Downregulation of antibacterial genes\nC) Activation of the AP-1 pathway\nD) Upregulation of TLR2 and S100A8\n\n**Answer2:** D"
+    },
+    "insight #24": {
+      "summary": "Listeria monocytogenes infection induces the upregulation of growth factors and pro-inflammatory molecules in Hofbauer cells (HBCs), which may aid in trophoblast renewal and placental defense.",
+      "how": "The authors used scRNA-seq to analyze HBC responses to L. monocytogenes infection, identifying upregulation of growth factor amphiregulin (AREG) and pro-inflammatory cytokine IL-1B. These findings were validated by multiplexed smFISH, showing the expression of AREG and IL-1B in infected explants. The results are discussed in the Results section and illustrated in Figures 4B and 4C.",
+      "relevant": "In response to L. monocytogenes, HBCs upregulated the growth factor amphiregulin (AREG) ( Figure 4B), an activator of the epidermal growth factor receptor (EGFR). This receptor-ligand interaction is known for promoting cell survival in trophoblasts. We validated the close proximity between AREG and EGFR by multiplexed smFISH (Figure 4C). HBCs upregulated IL-1B, while the components of the IL-1 receptor (IL1R1 and IL1RAP) were expressed predominantly in fibroblasts and PV cells (Figure 4B), suggesting that IL-1B upregulation in HBCs mainly targets fibroblasts and vascular cells. HBCs also expressed IL-1 receptor components, albeit at lower levels (Figure 4B), hinting at an additional effect of IL-1B on these macrophages. Using multiplexed smFISH, we visualized the upregulation of IL-1B (Figure 4B) and the expression of the receptor IL-1R1 (Figure 4D). This reinforces the notion that cells of the placental core were the primary targets of IL-1B upregulation",
+      "data": {
+        "benchmark/scdata/paper11/data/data.h5ad": "Placenta infection data (Human)"
+      },
+      "mcq_question": "**Question2:** Based on the dataset, what is the potential role of IL-1B upregulation in Hofbauer cells (HBCs) during L. monocytogenes infection?\nA) It primarily affects trophoblasts.\nB) It has no effect on placental cells.\nC) It targets endothelial cells exclusively.\nD) It targets fibroblasts and vascular cells.\n\n**Answer2:** D"
+    },
+    "insight #25": {
+      "summary": "Hofbauer cells (HBCs) play a crucial role in orchestrating the inflammatory response during placental infections, exhibiting plasticity in their responses to different pathogens.",
+      "how": "The authors used scRNA-seq to analyze the transcriptional responses of HBCs to various pathogens, revealing distinct activation pathways such as NF-kB in response to P. falciparum and AP-1 in response to T. gondii. These findings highlight the adaptability of HBCs in mounting pathogen-specific responses. The results are discussed in the Discussion section.",
+      "relevant": "Our study underscores the importance of HBCs in orchestrating the inflammatory response during the acute phase of infection. We demonstrated that HBCs also possess antimicrobial abilities in a physiological context and thus participate in the protection of the placenta. The study of their in vivo role in fighting infections within the placental context has been a major challenge and hence was poorly understood. Our placental explant setup with sustained viability of all cell types presents a unique opportunity to interrogate these macrophages, which are derived from erythro-myeloid progenitors during the primitive wave of hematopoiesis, without a monocyte intermediate. In line with the plasticity of macrophage responses to distinct environments and insults, we found that HBCs trigger specific and characteristic programs in the presence of different types of pathogens. For example, the systemic inflammatory response caused by P. falciparum attachment to the SCT activates the NF-kB pathway in HBCs.",
+      "data": {
+        "benchmark/scdata/paper11/data/data.h5ad": "Placenta infection data (Human)"
+      },
+      "mcq_question": "**Question1:** Based on the dataset, which pathway is activated in Hofbauer cells (HBCs)  in response to P. falciparum infection?\n\nA) AP-1 pathway\n\nB) NF-kB pathway\n\nC) JAK-STAT pathway\n\nD) MAPK pathway\n\n**Answer1:** B\n\n**Question2:** Based on the dataset, which pathway is activated in Hofbauer cells (HBCs) in response to T. gondii infection?\n\nA) AP-1 pathway\n\nB) NF-kB pathway\n\nC) JAK-STAT pathway\n\nD) MAPK pathway\n\n**Answer2:** A"
+    }
+  },
+  "paper12": {
+    "insight #27": {
+      "summary": "IFN-I-responsive microglia are involved in the phagocytosis of whole neurons, a process essential for normal cortical development and preventing the accumulation of DNA-damaged neurons.",
+      "how": "The study demonstrated that IFN-I-responsive microglia actively engulf whole neurons during cortical development. This was evidenced by immunostaining for IFITM3, a marker of IFN-I-responsive microglia, which showed increased presence in deprived cortices. The engulfment process was confirmed using several markers and transgenic lines, indicating that these microglia are crucial for removing neurons with DNA damage. This finding is detailed in Figures 3 and 4.",
+      "relevant": "IFN-I responsive microglia engulf neurons during cortical developmental remodeling... We identified a rare population of IFITM3+ microglia in deeper cortical layers (L4/5) that were significantly increased in deprived cortex as quantified in situ and by flow cytometry (Figures 3B, 3C, and S3A)... These data suggest that IFN-I signaling may promote elimination of neurons that had accumulated DNA damage.",
+      "data": {
+        "benchmark/scdata/paper12/data/data.h5ad": "scRNA-seq data from barrel cortex (Mouse)"
+      },
+      "mcq_question": "**Question1:** What does the dataset indicate about the role of IFN-I-responsive microglia in cortical development?\nA) They promote neuron proliferation.\nB) They are involved in the phagocytosis of whole neurons.\nC) They inhibit neuron differentiation.\nD) They prevent the accumulation of DNA-damaged neurons.\n\n**Answer1:** B,D"
+    }
+  },
+  "paper13": {
+    "insight #29": {
+      "summary": "The study identifies that uterine natural killer (uNK) cell-derived cytokines enhance the differentiation of extravillous trophoblasts (EVTs) by promoting subtypes that penetrate deeper into the decidua, which is crucial for successful placentation.",
+      "how": "The authors used single-cell RNA sequencing (scRNA-seq) and trophoblast organoids to model interactions between uNK cells and EVTs. They identified specific cytokines produced by uNK cells that interact with receptors on EVTs. By treating trophoblast organoids with these cytokines, they observed enhanced differentiation of EVTs into subtypes that are more invasive, as evidenced by increased expression of markers associated with late-stage EVT subtypes. This was supported by trajectory analysis and differential abundance analysis, showing a higher proportion of late EVT subtypes in cytokine-treated organoids.",
+      "relevant": "To determine the effect of this uNK cell cytokine cocktail on EVT behavior, we used our trophoblast organoid system ... At later time points, there is a trend for an increased proportion of late EVT subtypes in cytokine-treated organoids (Figures 3B and S2H). For instance, EVT_late_3 is mainly detected at 96 h from the organoids treated with cytokines in two donors (Figures 3B and S2F). This is reinforced by a differential abundance analysis, which demonstrates that late EVT subtypes, especially EVT_late_3 are significantly enriched for cytokine-treated versus untreated cells (Figure 3C).",
+      "data": {
+        "benchmark/scdata/paper13/data/data.h5ad": "Single-cell RNA-seq data generated from human trophoblast organoids that were treated with and without cytokines secreted by uterine natural killer cells."
+      },
+      "mcq_question": "**Question2:** What evidence from the dataset supports the enhanced differentiation of extravillous trophoblasts (EVTs) into more invasive subtypes?\n\nA) Increased expression of early EVT markers in cytokine-treated organoids.\n\nB) A higher proportion of late EVT subtypes in cytokine-treated organoids.\n\nC) Decreased expression of late EVT markers in untreated organoids.\n\nD) No change in EVT subtype proportions in cytokine-treated organoids.\n\n**Answer2:** B"
+    },
+    "insight #30": {
+      "summary": "uNK cell-derived cytokines regulate diverse genetic programs in EVTs, affecting processes such as epithelial-mesenchymal transition, cell invasion, and fusion, which are vital for placental development.",
+      "how": "The authors performed scRNA-seq on organoids treated with uNK cell cytokines and compared the gene expression profiles to untreated controls. They identified upregulated genes involved in epithelial-mesenchymal transition, cell invasion, and fusion, which are critical for EVT differentiation and function. These findings were supported by in vivo data showing similar gene expression patterns in EVTs from decidual tissue, indicating that cytokine-induced changes in organoids reflect in vivo conditions.",
+      "relevant": "Genes upregulated in EVTs after exposure to uNK cell cytokines are involved in several different biological processes (Figure S4D). In line with the morphological and cellular changes supporting enhancement of EVT differentiation, genes involved in epithelial-mesenchymal transition (MCAM, TGFBR2, HEG1, and VGLL3), cell invasion (ADGRE5, MMP11, TIMP3, and S100P), and fusion (CD9 and ADAM12) are upregulated by uNK cell cytokines (Figures 4A and S4D)",
+      "data": {
+        "benchmark/scdata/paper13/data/data.h5ad": "Single-cell RNA-seq data generated from human trophoblast organoids that were treated with and without cytokines secreted by uterine natural killer cells."
+      },
+      "mcq_question": "**Question2:** Which gene expression changes in the dataset indicate enhanced extravillous trophoblasts (EVT) differentiation after uterine natural killer (uNK) cell cytokine treatment?\nA) Downregulation of genes involved in cell cycle progression\nB) Downregulation of genes involved in cell invasion\nC) Upregulation of genes involved in epithelial-mesenchymal transition and fusion\nD) No change in gene expression related to differentiation\n\n**Answer2:** C"
+    },
+    "insight #31": {
+      "summary": "Cytokines from uNK cells modulate the immune environment at the maternal-fetal interface by upregulating cytokine receptor subunits in EVTs, potentially dampening local inflammation and promoting immune tolerance.",
+      "how": "The study used scRNA-seq to analyze the expression of cytokine receptors in EVTs treated with uNK cell cytokines. They found increased expression of receptors such as IL1R2, which acts as a decoy receptor for inflammatory cytokines, suggesting a mechanism for reducing inflammation. The authors also noted upregulation of other receptor subunits that could modulate immune responses, supporting the role of uNK cell cytokines in creating an immune-tolerant environment.",
+      "relevant": "Among them, the interleukin (IL) 1 receptor IL1R2 acts as a decoy receptor for IL1B produced in abundance by decidual macrophages (Figure S4E), suggesting a mechanism for dampening local inflammation in the placental bed ... Thus, these findings reinforce our earlier results that uNK cells have an essential role in dampening any innate or adaptive immune responses during placentation.",
+      "data": {
+        "benchmark/scdata/paper13/data/data.h5ad": "Single-cell RNA-seq data generated from human trophoblast organoids that were treated with and without cytokines secreted by uterine natural killer cells."
+      },
+      "mcq_question": "**Question1:** What change in extravillous trophoblasts (EVT) expression is suggested by the dataset to potentially dampen local inflammation?\n\nA) Upregulation of IL1R2 receptor.\n\nB) Downregulation of IL1R2 receptor.\n\nC) Upregulation of inflammatory cytokines.\n\nD) Downregulation of cytokine receptor subunits.\n\n**Answer1:** A"
+    }
+  }
+}

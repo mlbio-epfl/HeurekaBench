@@ -1,0 +1,125 @@
+{
+  "paper3": {
+    "insight #1": {
+      "summary": "The study identifies distinct adipocyte subtypes in human subcutaneous and visceral adipose tissues, revealing a complex landscape of classical and nonclassical adipocytes with specialized functions.",
+      "how": "Using single-nucleus RNA sequencing (snRNA-seq), the authors analyzed adipocyte nuclei from human subcutaneous (hSAT) and visceral adipose tissues (hVAT), identifying seven and eight clusters of adipocytes, respectively. These clusters were characterized based on their expression profiles and functional enrichment analyses, which revealed classical adipocytes enriched in lipid metabolism and nonclassical subtypes with functions related to angiogenesis, immune regulation, and extracellular matrix processes. The authors used differential expression and functional enrichment analyses to categorize these subtypes, supported by Figures 2 and 3.",
+      "relevant": "We next investigated the diversity of the adipocyte population per depot by subclustering adipocytes based on their snRNA-seq profiles. This analysis revealed seven and eight clusters of hSAT and hVAT adipocytes, which we denoted SA1\u20137 and VA1\u20138, respectively (Fig. 2a)... In both depots, SA1 and VA1 clusters were enriched for fatty acid and lipid metabolic processes and were therefore denoted as \u2018classical adipocytes\u2019 (Fig. 3b)... Most of the remaining clusters were enriched for nonclassical adipocyte functions: \u2018angiogenic adipocytes\u2019 (SA2,VA2) were enriched for angiogenesis, blood vessel and vascular development processes, \u2018Immune-related adipocytes\u2019 (SA3,VA3)... \u2018Extracellular matrix (ECM) adipocytes\u2019 (SA5,VA5)...",
+      "data": {
+        "benchmark/scdata/paper3/data/dataset2.h5ad": "snRNA-seq of human visceral adipose tissue - all cells",
+        "benchmark/scdata/paper3/data/VA_adipocytes.h5ad": "snRNA-seq of human visceral adipose tissue - adipocytes",
+        "benchmark/scdata/paper3/data/dataset1.h5ad": "snRNA-seq of human subcutaneous adipose tissue - all cells",
+        "benchmark/scdata/paper3/data/SA_adipocytes.h5ad": "snRNA-seq of human subcutaneous adipose tissue - adipocytes"
+      },
+      "mcq_question": "**Question1:** Based on the dataset analysis, which adipocyte subtype is enriched for lipid metabolism processes?\n\nA) SA1\n\nB) SA3\n\nC) VA5\n\nD) VA2\n\n**Answer1:** A"
+    },
+    "insight #3": {
+      "summary": "The study reveals depot-specific differences in adipocyte intercellular communication, with hVAT exhibiting more proinflammatory signaling compared to hSAT.",
+      "how": "Using CellphoneDB and CellChat analyses, the authors examined intercellular communication patterns among adipocyte subtypes and between adipocytes and immune cells. They found that hVAT adipocytes engage more in proinflammatory signaling pathways, such as IL-16, compared to hSAT, which shows more anti-inflammatory interactions, such as annexin signaling. These findings are illustrated in Figure 7 and supported by supplementary data.",
+      "relevant": "Adipose tissues are key endocrine organs relying on adipocyte paracrine communication... In hVAT, mast cells interacted more with adipocytes and myeloid cells than in hSAT (Fig. 7a)... The proinflammatory IL-16 signaling involved many cell types of the macrophage or myeloid compartment in both depots and with similar intensity, except for the unique role of VA3 as the sole adipocyte subtype receiver... The anti-inflammatory annexin signaling was much more pronounced in hSAT versus hVAT...",
+      "data": {
+        "benchmark/scdata/paper3/data/dataset2.h5ad": "snRNA-seq of human visceral adipose tissue - all cells",
+        "benchmark/scdata/paper3/data/VA_adipocytes.h5ad": "snRNA-seq of human visceral adipose tissue - adipocytes",
+        "benchmark/scdata/paper3/data/dataset1.h5ad": "snRNA-seq of human subcutaneous adipose tissue - all cells",
+        "benchmark/scdata/paper3/data/SA_adipocytes.h5ad": "snRNA-seq of human subcutaneous adipose tissue - adipocytes"
+      },
+      "mcq_question": "**Question1:** Analysis of the dataset indicates that which signaling pathway is more pronounced in hVAT compared to hSAT?\n\nA) Annexin signaling\n\nB) IL-16 signaling\n\nC) TGF-beta signaling\n\nD) Wnt signaling\n\n**Answer1:** B\n\n**Question2:** Based on the dataset, which adipocyte subtype is uniquely involved as the sole receiver in proinflammatory IL-16 signaling in hVAT?\n\nA) VA1\n\nB) VA2\n\nC) VA3\n\nD) VA5\n\n**Answer2:** C"
+    },
+    "insight #7": {
+      "summary": "The study suggests that adipocyte subtypes in hSAT and hVAT have similar regulatory networks but exhibit depot-specific transcription factor activity.",
+      "how": "Using SCENIC analysis, the authors identified active regulons in adipocyte subtypes, revealing common transcription factors like ATF2 and CEBPB across depots. However, depot-specific activity was noted, such as CEBPA in hVAT but not hSAT, indicating differential regulatory mechanisms. These findings are detailed in Figure 4 and supplementary tables.",
+      "relevant": "We next searched for potentially active regulons (transcription factors and their target genes) per adipocyte subtype using SCENIC17... Depot differences were also noted. For example, CEBPA regulon was identified in VA1\u20138, but not in hSAT adipocyte subtypes... Jointly, the regulon analysis provided a depot similar and differential regulatory network view, supporting the putative functionality of nonclassical adipocytes...",
+      "data": {
+        "benchmark/scdata/paper3/data/dataset2.h5ad": "snRNA-seq of human visceral adipose tissue - all cells",
+        "benchmark/scdata/paper3/data/VA_adipocytes.h5ad": "snRNA-seq of human visceral adipose tissue - adipocytes",
+        "benchmark/scdata/paper3/data/dataset1.h5ad": "snRNA-seq of human subcutaneous adipose tissue - all cells",
+        "benchmark/scdata/paper3/data/SA_adipocytes.h5ad": "snRNA-seq of human subcutaneous adipose tissue - adipocytes"
+      },
+      "mcq_question": "**Question1:** Based on the dataset, which transcription factor is specifically active in hVAT adipocytes but not in hSAT?\n\nA) ATF2\n\nB) CEBPB\n\nC) CEBPA\n\nD) PPAR\u03b3\n\n**Answer1:** C\n\n**Question2:** Analysis of the dataset reveals which transcription factors are commonly active across both hSAT and hVAT adipocytes?\n\nA) ATF2\n\nB) CEBPB\n\nC) CEBPA\n\nD) STAT3\n\n**Answer2:** A,B"
+    },
+    "insight #8": {
+      "summary": "Adipocyte subtypes in hVAT exhibit more interactions with immune cells compared to hSAT, contributing to a proinflammatory environment.",
+      "how": "The authors used CellphoneDB to analyze cell-cell interactions, finding that hVAT adipocytes have more interactions with immune cells, such as macrophages and mast cells, compared to hSAT. This increased interaction is linked to the proinflammatory nature of hVAT. The analysis is supported by heatmaps and interaction data in Figure 7.",
+      "relevant": "In hVAT, mast cells interacted more with adipocytes and myeloid cells than in hSAT (Fig. 7a)... To further explore this seemingly enhanced proinflammatory pattern in hVAT compared with hSAT, we examined the IL-16 and annexin pathways on including the macrophage or myeloid compartment... Thus, depot-differential communication patterns between adipocyte subtypes and mast cells may also contribute to the differential inflammatory and fibrotic \u2018tone\u2019 between the two fat depots...",
+      "data": {
+        "benchmark/scdata/paper3/data/dataset2.h5ad": "snRNA-seq of human visceral adipose tissue - all cells",
+        "benchmark/scdata/paper3/data/VA_adipocytes.h5ad": "snRNA-seq of human visceral adipose tissue - adipocytes",
+        "benchmark/scdata/paper3/data/dataset1.h5ad": "snRNA-seq of human subcutaneous adipose tissue - all cells",
+        "benchmark/scdata/paper3/data/SA_adipocytes.h5ad": "snRNA-seq of human subcutaneous adipose tissue - adipocytes"
+      },
+      "mcq_question": "**Question1:** According to the dataset, which immune cells show increased interaction with hVAT adipocytes?\n\nA) Macrophages\n\nB) T cells\n\nC) Mast cells\n\nD) B cells\n\n**Answer1:** A,C"
+    }
+  },
+  "paper5": {
+    "insight #5": {
+      "summary": "The study uncovers transcription factor networks specific to mesenchymal lineage progression, highlighting key regulators such as MEIS2, LHX2, and HOXA13.",
+      "how": "Using scRNA-seq data, the authors inferred transcription factor networks associated with mesenchymal lineage progression. They identified key transcription factors such as MEIS2 in proximal mesenchyme, LHX2 and MSX1 in distal mesenchyme, and HOXA13 in the autopod. These findings were supported by regulon analysis using SCENIC, as detailed in Figure 3 and the Results section.",
+      "relevant": "\"We next looked for modules of active transcription factor networks associated with progression through each lineage (see Methods; Fig. 3c,d, Supplementary Table 4 and Extended Data Fig. 7a,b)... The distal mesenchyme showed activation of LHX2, MSX1 and MSX2, as previously described in the mouse, as well as HOXA13, which defines the autopod38,39. HIC1 was predicted to have activity in several mesenchymal populations (Fig. 3c,d).\"",
+      "data": {
+        "benchmark/scdata/paper5/data/dataset2.h5ad": "scRNA-seq data for human limb"
+      },
+      "mcq_question": "**Question1:** Based on the dataset, which transcription factors are associated with the distal mesenchyme in mesenchymal lineage progression?\n\nA) MEIS2\n\nB) LHX2\n\nC) HOXA13\n\nD) MSX1\n\n**Answer1:** B,D\n\n**Question2:** Analysis of the dataset suggests which transcription factor is specifically associated with the autopod region in mesenchymal lineage progression?\n\nA) MEIS2\n\nB) LHX2\n\nC) HOXA13\n\nD) MSX1\n\n**Answer2:** C"
+    },
+    "insight #6": {
+      "summary": "The study reveals distinct patterns of cell-cell communication in the developing limb, with stage-specific ligand-receptor interactions involving WNT, NOTCH, and FGF signaling pathways.",
+      "how": "The authors used scRNA-seq and spatial transcriptomics to analyze ligand-receptor interactions in the developing limb. They identified stage-specific interactions, such as WNT5A-FZD10 in distal mesenchyme, JAG1-NOTCH1 in posterior mesenchyme, and FGF8-FGF10 in ectoderm and mesenchyme. These interactions were validated using RNA-ISH and are discussed in Figure 5 and the Results section.",
+      "relevant": "We next looked for stage-specific ligand\u2013receptor interactions in co-located cell populations (see Methods). This highlighted the role of the WNT signalling pathway in early limb morphogenesis. WNT5A exhibited a proximal\u2013distal expression gradient, peaking in the distal mesenchyme (Fig. 5a\u2013e)... In the early (PCW5.6) limb, NOTCH signalling was predicted to occur in its distal posterior aspect through the SHH-induced11,69 canonical ligand JAG1 (Fig. 5a,f) and was confirmed with RNA-ISH (Fig. 5g).",
+      "data": {
+        "benchmark/scdata/paper5/data/dataset2.h5ad": "scRNA-seq data for human limb"
+      },
+      "mcq_question": "**Question1:** According to the dataset, which ligand-receptor interaction is predicted to occur in the distal mesenchyme during limb development?\n\nA) WNT5A-FZD10\n\nB) JAG1-NOTCH1\n\nC) FGF8-FGF10\n\nD) SHH-PTCH1\n\n**Answer1:** A\n\n**Question2:** Based on the dataset analysis, which signaling pathway is involved in the posterior mesenchyme during early limb development?\n\nA) WNT signaling\n\nB) NOTCH signaling\n\nC) FGF signaling\n\nD) BMP signaling\n\n**Answer2:** B"
+    }
+  },
+  "paper7": {
+    "insight #1": {
+      "summary": "The study highlights an age-related increase in pro-inflammatory cytokine CCL2 expression in muscle microenvironment cells, contributing to immune cell attraction.",
+      "how": "The authors performed differential gene expression analysis on aging muscle microenvironment cells, identifying significant upregulation of CCL2 in aged muscle. This was confirmed by qPCR and immunofluorescence staining, showing increased CCL2 expression in capillaries and smooth muscle cells. CellPhoneDB analysis predicted interactions between CCL2-producing cells and immune cells, suggesting a role in immune cell recruitment. These findings are supported by Figure 5 and Extended Data Figure 9.",
+      "relevant": "To further clarify the influence of aging muscle microenvironment, we performed aging DEG analysis on cell types comprising the muscle microenvironment (Supplementary Table 3), paying particular attention to chemokines and cytokines. Strikingly, several cell populations in the aging muscle either significantly upregulated or had a tendency toward increased expression of CCL2 (Fig. 5k). CCL2 is the major pro-inflammatory and monocyte/macrophage-attracting cytokine known to be activated in muscle injury. Indeed, we found that CCL2 expression was greatly increased in the small capillaries and in the SMCs of the large blood vessels with age (Fig. 5l)",
+      "data": {
+        "benchmark/scdata/paper7/data/processed_human_muscle_data.h5ad": "Human muscle data",
+        "benchmark/scdata/paper7/data/de_celltype_Age_interaction_all.txt": "Differential expression results for age interaction across cell types"
+      },
+      "mcq_question": "**Question2:** What does the analysis suggest about the role of CCL2 in the aging muscle microenvironment?\n\nA) It is involved in muscle regeneration\n\nB) It contributes to immune cell recruitment\n\nC) It decreases inflammation\n\nD) It inhibits cytokine production\n\n**Answer2:** B"
+    }
+  },
+  "paper8": {
+    "insight #3": {
+      "summary": "Non-negative matrix factorization (NMF) analysis supports the presence of five major patterns of regional gene expression by enterocytes across the intestine.",
+      "how": "The authors used NMF to detect co-expressed gene modules across the small intestine. The analysis revealed modules that displayed variability across the intestine, with expression trajectories grouping into patterns that recapitulated the signature scores of the five domains. This analysis reinforced the presence of distinct regional gene expression patterns in enterocytes.",
+      "relevant": "We then investigated the larger gene expression programs underlying the five domains using non-negative matrix factorization (NMF). NMF detects co-expressed gene modules and, unlike the signature score approach, is agnostic to putative domain boundaries. We detected modules that displayed variability across the mouse and human SI (Fig. 2e,f  and Supplementary Table 4). Many of these modules contained top regional signature genes, and their expression trajectories grouped into patterns that recapitulated the signature scores.",
+      "data": {
+        "benchmark/scdata/paper8/data/mouse_data.h5ad": "Epithelial cells collected from 30 segments across the proximal (1) to distal (30) ends of the mouse small intestine.",
+        "benchmark/scdata/paper8/data/domain_mapping.json": "Domain names as keys mapped to segments available in the mouse dataset."
+      },
+      "mcq_question": "**Question2:** What does the non-negative matrix factorization (NMF) analysis reveal about the expression trajectories of gene modules across the intestine?\n\nA) They show random variability with no discernible patterns.\n\nB) They group into patterns that matched the signature scores of the five domains.\n\nC) They indicate uniform expression across all domains.\n\nD) They show expression patterns only in the proximal intestine.\n\n**Answer2:** B"
+    }
+  },
+  "paper9": {
+    "insight #4": {
+      "summary": "Aging in the ovary is associated with a downregulation of collagenase pathways in stromal fibroblasts, contributing to increased ovarian fibrosis.",
+      "how": "The authors performed subclustering of stromal cells and identified age-related transcriptional changes. They observed a downregulation of the collagenase pathway and decreased expression of matrix metalloproteinase 2 (Mmp2) in fibroblast-like stromal cells with age. These findings were supported by immunofluorescence showing decreased MMP2 protein in the ovarian stroma of aged mice. The results are detailed in Figures 5 and 6.",
+      "relevant": "Following SCL identification, a list of genes differentially expressed by the different ages in each SCL was imported into the software Ingenuity Pathway Analysis (IPA) to infer biological function. Fibroblast-like stromal cells showed an age-related upregulation of pathways related to tissue remodeling (Fig. 5d). Tissue remodeling occurs following ovulation and in cases of follicular and luteal atresia. To our surprise, collagen expression was unchanged by aging in ovarian fibroblast-like SCL (Fig. 6a) despite greater collagen deposition by 9 months of age (Fig. 6b). Interestingly, the collagenase pathway was downregulated in the fibroblast-like SCL (Fig. 6c). Further analyses revealed that the expression of matrix metalloproteinase 2 (Mmp2), a key enzyme involved in collagen degradation, was decreased in the fibroblast-like SCL with advancing age (Fig. 6d)",
+      "data": {
+        "benchmark/scdata/paper9/data/data.h5ad": "A single-cell atlas of the aging mouse ovary"
+      },
+      "mcq_question": "**Question1:** Based on the dataset, what age-related transcriptional change is observed in fibroblast-like stromal cells?\n\nA) Upregulation of collagen expression\n\nB) Downregulation of collagenase pathway\n\nC) Increased expression of Mmp2\n\nD) Upregulation of tissue remodeling pathways\n\n**Answer1:** B\n\n**Question2:** What does the dataset suggest about the expression of matrix metalloproteinase 2 (Mmp2) in fibroblast-like stromal cells with age?\n\nA) It increases with age\n\nB) It remains unchanged with age\n\nC) It decreases with age\n\nD) It is not expressed in fibroblast-like stromal cells\n\n**Answer2:** C"
+    },
+    "insight #5": {
+      "summary": "Granulosa cells in aged ovaries show increased activation of stress-response, immunogenic, and fibrotic signaling pathways.",
+      "how": "The authors used scRNA-seq to analyze granulosa cells from young and aged mice. They identified four distinct granulosa cell subclusters and found that preantral, antral, and atretic granulosa cells displayed age-related increases in pathways related to proinflammatory stress and fibrogenesis. These findings were supported by Ingenuity Pathway Analysis (IPA) and are presented in Figures 7d-f.",
+      "relevant": "As alluded to above, differentially expressed genes from each SCL were examined with IPA software to infer biological function. Interestingly, preantral, antral and atretic GCs all displayed an age-related increase in pathways related to proinflammatory stress and fibrogenesis (Fig. 7d-f ). These observations corresponded to a significant increase in the mitochondrial dysfunction pathway within oocytes (Fig. 7g). Upstream regulators related to proinflammatory stress that were found to be increased in GC SCL included IFNG, TNF, IL15 and IL1A (Supplementary Fig. 7a)",
+      "data": {
+        "benchmark/scdata/paper9/data/data.h5ad": "A single-cell atlas of the aging mouse ovary"
+      },
+      "mcq_question": "**Question2:** Which pathways are found to be increased in preantral, antral and atretic granulosa cell subclusters with age, based on the dataset?\n\nA) Mitochondrial dysfunction pathways\n\nB) Anti-inflammatory signaling pathways\n\nC) Proinflammatory stress pathways\n\nD) Fibrogenesis pathways\n\n**Answer2:** C,D"
+    },
+    "insight #6": {
+      "summary": "Aging leads to a breakdown in anti-M\u00fcllerian hormone signaling between oocytes and other follicular cells, potentially impacting reproductive outcomes.",
+      "how": "The authors analyzed intercellular signaling pathways using scRNA-seq data and found that by 9 months of age, there was a breakdown in anti-M\u00fcllerian hormone signaling between oocytes and other follicular cells. This was not observed in 3-month-old mice and is detailed in Supplementary Figure 7d,e.",
+      "relevant": "Interestingly, there was a breakdown in the anti-M\u00fcllerian hormone signaling pathway between oocytes and other follicular cells by 9 months of age (Supplementary Fig. 7d,e). The anti-M\u00fcllerian hormone pathway is critical for regulation of follicular maturation and is commonly used as a marker of follicular reserve. This breakdown in signaling therefore signifies early changes that may impact reproductive outcomes",
+      "data": {
+        "benchmark/scdata/paper9/data/data.h5ad": "A single-cell atlas of the aging mouse ovary"
+      },
+      "mcq_question": "**Question1:** What does the dataset indicate about anti-M\u00fcllerian hormone signaling pathway between oocytes and other follicular cells in aged ovaries?\n\nA) It remains stable across all ages\n\nB) It breaks down by 9 months of age\n\nC) It is enhanced in 3-month-old mice\n\nD) It is not present in oocytes\n\n**Answer1:** B"
+    }
+  }
+}

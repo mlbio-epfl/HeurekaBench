@@ -1,0 +1,34 @@
+paper_id,paper,hypothesis_id,hypothesis
+1,https://doi.org/10.1172/jci.insight.167744,1,"Truncating ASXL1 mutations will lead to specific gene expression changes in blood that reflect alterations in hematological processes, such as T cell and neutrophil activation."
+1,https://doi.org/10.1172/jci.insight.167744,2,"Truncating ASXL1 mutations that cause Bohring-Opitz syndrome (BOS) will cause specific transcriptional changes that are tissue-specific, such as processes related to cellular structure in patient-derived fibroblast cell culture."
+1,https://doi.org/10.1172/jci.insight.167744,3,The distribution of variant effects / types of putative somatic CHIP variants in Bloom Syndrome probands and carriers will not differ significantly from that of controls. 
+1,https://doi.org/10.1172/jci.insight.167744,4,"Truncating ASXL1 mutations that cause Bohring-Opitz syndrome will lead to significant dysregulation of gene expression in blood RNA-seq, with a higher number of differentially expressed genes (DEGs) compared to fibroblast RNA-seq due to the complex cellular composition of blood."
+2,doi.org/10.3324/haematol.2024.285239,1,"Bloom Syndrome (BSyn) probands and BLM mutation carriers will have a higher mean proportion of low-frequency, somatic CHIP gene variants (VAF < 0.3) compared to control cohorts, given that mutations in the BLM gene are known to cause increased genomic instability."
+2,doi.org/10.3324/haematol.2024.285239,2,The distribution of variant pathogenicity of putative somatic CHIP variants in Bloom Syndrome probands and carriers will not differ significantly from that of controls.
+2,doi.org/10.3324/haematol.2024.285239,3,"We hypothesize that the gene distribution of putative somatic CHIP variants are not significantly different across individuals with or without mutations in the BLM gene (i.e. Bloom syndrome probands, carriers, and controls)."
+3,https://www.nature.com/articles/s41467-022-29205-8#Abs1,1,"Immune-relevant pathways will be enriched within the set of genes that, when perturbed, enable cancer cells to evade T cell-mediated cytotoxicity."
+4,https://doi.org/10.3324/haematol.2024.285239,1,"Bloom Syndrome (BSyn) probands and BLM mutation carriers will have similar levels of germline mutations to controls, but will acquire more DNA mutations, resulting in a higher number of somatic variants, given that Bloom Syndrome is characterized by increased genomic instability. "
+4,https://doi.org/10.3324/haematol.2024.285239,2,The increased number of somatic variants in CHIP (clonal haematopoiesis of indeterminate potential) genes found in Bloom syndrome probands and carriers is not an effect of increased germline variants in CHIP genes. 
+4,https://doi.org/10.3324/haematol.2024.285239,3,"Bloom Syndrome (BSyn) probands and BLM mutation carriers will have a higher number of low-frequency, somatic CHIP gene variants (VAF < 0.3) compared to control cohorts, given that Bloom Syndrome is characterized by increased genomic instability."
+5,10.17632/dj4sb8h3c3.1,1,mRNA m6A methylation plays a significant role in the development of human bladder cancer
+5,10.17632/dj4sb8h3c3.1,2,"Proteomics levels of ENO1 are different between tumour and control, in human bladder cancer"
+6,https://zenodo.org/records/12737228,1,Tubercolosis BCG re-vaccination reduces COVID-19 disease severity among healthcare workers
+6,https://zenodo.org/records/12737228,2,Prior history of severe disease correlates with increased COVID-19 severity among healthcarre workers following BCG re-vaccination
+7,https://doi.org/10.17912/micropub.biology.001326,1,Knocking out either rhlI or lasI impacts the downstream expression of dozens of genes which may be involved in mediating the observed division of labor.
+7,https://doi.org/10.17912/micropub.biology.001326,2,"Disrupting genes in either the las or rhl quorum sensing (QS) systems, either the receptors or the synthases, abrogates swarming motility, a form of movement that allows Pseudomonas aeruginosa and other bacteria to expand their access to nutrients and therefore increase their fitness."
+7,https://doi.org/10.17912/micropub.biology.001326,3,Downstream gene expression of rhlI and lasI mutants is altered in different media suggesting that quorum sensing-mediated division of labor is environment-dependent.
+7,https://doi.org/10.17912/micropub.biology.001326,4,"Knocking out either lasI, rhlI, or both simultaneously, alters the expression of numerous downstream pathways of diverse functions.
+"
+7,https://doi.org/10.17912/micropub.biology.001326,5,"Co-culturing the strains with single-gene knockouts (ΔrhlI and ΔlasI) in the reciprocal QS pathways rhl and las, restores wildtype swarming behavior for the population as a whole, albeit in a density-dependent manner."
+7,https://doi.org/10.17912/micropub.biology.001326,6,Genes that are downregulated in either ΔrhlI or ΔlasI strains are candidates for receiving complementation from the other strain and are therefore important candidates for mediating division of labor.
+7,https://doi.org/10.17912/micropub.biology.001326,7,"QS gene mutants ΔrhlI and ΔlasI demonstrate division of labor when they are co-cultured at an optimal ratio, leading to improved fitness even when compared with wildtype fitness."
+8,"https://zenodo.org/records/8036465, https://www.science.org/doi/10.1126/sciadv.adf4950",1,Significant neuronal damage is induced by OXTR gene knockdown across rodent species
+9,https://zenodo.org/records/10000430,1,Gene length positively correlates with expression level across immune cell types in children
+9,https://zenodo.org/records/10000430,2,Sex-specific differences in gene expression are more pronounced in protein-coding genes within CD4 and CD8 cells
+9,https://zenodo.org/records/10000430,3,miRNAs exhibit a constant expression profile across immune-related cell types
+10,"https://zenodo.org/records/8353706, https://www.mdpi.com/1422-0067/24/19/14743",1,CBD treatment of CRC cells causes metabolic dysregulation in the cells
+10,"https://zenodo.org/records/8353706, https://www.mdpi.com/1422-0067/24/19/14743",2,combination treatment of CBD and chemotheraputics of CRC cells enriches for cell cycle regulation and apoptosis processes
+11,https://doi.org/10.5061/dryad.ttdz08kxq,1,"Alzheimer’s disease patients can be subtyped by gene expression, suggesting distinct mechanisms and therapeutic targets."
+12,10.1371/journal.pone.0150501,1,Serum miRNAs can be used as Myotonic Dystrophy Type 1 Biomarkers
+13,https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0305268,1,Multimodal integration of RNA expression data and DNA methylation data improves the accuracy of colon cancer survival prediction compared to single-modality models.
+14,"https://zenodo.org/records/14063261, https://www.jbc.org/article/S0021-9258(24)02587-0/fulltext",1,UBEM2 KD in macrophages attenuates antioxidant processes in the cells

@@ -1,0 +1,145 @@
+{
+  "paper2": {
+    "insight #4": {
+      "summary": "Myeloid cell expansion in myocarditis is non-specific to the cause, with similar compositional changes observed across Non-COVID-19, Post-COVID-19, and Post-Vaccination groups.",
+      "how": "The authors characterized myeloid cells using snRNA-seq, identifying various macrophage states and monocytes. Despite differences in the extent of myeloid expansion, similar compositional alterations were found in all myocarditis groups, including increased monocyte-derived macrophages and decreased resident macrophages. This was demonstrated through UMAP embeddings and proportional changes in myeloid cell states, as shown in Figure 2b and Extended Data Fig. 4a.",
+      "relevant": "Despite the varying extent of the overall myeloid expansion (Extended Data Fig. 2d), we observed similar striking compositional alterations in the myeloid populations in Non-Covid-19, Post-COVID-19 and Post-Vaccination groups compared to control (Fig. 2b and Extended Data Fig. 4a).",
+      "data": {
+        "benchmark/scdata/paper2/data/my_dataset.h5ad": "Myeloid cells from human cardiac tissue with myocarditis and healthy controls"
+      },
+      "mcq_question": "**Question2:** The dataset indicates that myeloid cell expansion in myocarditis is characterized by what change in resident macrophages?\n\nA) Increased numbers\n\nB) Decreased numbers\n\nC) No change in numbers\n\nD) Complete elimination of all resident macrophages\n\n**Answer2:** B"
+    }
+  },
+  "paper3": {
+    "insight #5": {
+      "summary": "The study identifies a unique hVAT-specific adipocyte subtype, VA6, characterized by high mitochondrial and ribosomal gene expression, suggesting a specialized metabolic role.",
+      "how": "The authors identified the VA6 cluster in hVAT through snRNA-seq, which showed enrichment in mitochondrial and ribosomal genes. This subtype was further validated by high expression of nuclear-encoded mitochondrial genes and immunofluorescence staining for mitochondrial markers. The findings suggest a specialized role for VA6 in energy metabolism, supported by Figure 5 and supplementary data.",
+      "relevant": "\"The depot-specific cluster VA6 was enriched in mitochondrial and ribosomal genes and processes... VA6 was characterized by relatively high expression of mitochondrial and ribosomal genes or functions, possibly consistent with a high protein translation activity and/or a high mitochondrial content, which characterizes hVAT20... Immunostaining hVAT for the VA6 mitochondrial marker protein, MT-CO2 (Fig. 5j), revealed rare MT-CO2-positive adipocytes...\"",
+      "data": {
+        "benchmark/scdata/paper3/data/dataset2.h5ad": "snRNA-seq of human visceral adipose tissue - all cells",
+        "benchmark/scdata/paper3/data/VA_adipocytes.h5ad": "snRNA-seq of human visceral adipose tissue - adipocytes"
+      },
+      "mcq_question": "**Question1:** What gene expression characteristics define the VA6 adipocyte subtype in human visceral adipose tissue (hVAT)?\nA) High expression of lipid metabolism genes\nB) High expression of mitochondrial genes\nC) High expression of immune response genes\nD) High expression of ribosomal genes\n\n**Answer1:** B,D"
+    }
+  },
+  "paper6": {
+    "insight #1": {
+      "summary": "CD206+ macrophages in the LP engage in a tolerogenic interaction with eTreg cells, mediated by specific receptor-ligand pairs.",
+      "how": "The authors employed CellPhoneDB analysis to identify significant receptor-ligand interactions between eTreg cells and other cell types in the LP. They found that CD206+ macrophages interact with eTreg cells through IL-10 and other signaling pathways. This was supported by in vivo imaging showing eTreg cells in close proximity to CD206+ macrophages, suggesting a spatial and functional interaction crucial for maintaining gut homeostasis.",
+      "relevant": "Because IL-10 and other STAT3-activating cytokines are key to controlling homeostasis and inflammation in the intestine, we performed a search of STAT3-dependent cytokine genes across the most abundant myeloid and lymphoid subsets in the tissue. We found upregulated expression of the pro-inflammatory cytokine gene Il6 in IL-1\u03b2+CD103+SIRP\u03b1+ dendritic cells resident in the LA (Fig. 3g). By contrast, the LP was dominated by Il10, which is expressed primarily by eTreg cells, with some expression in CD206+ and IL-1\u03b2+ macrophage subsets (Fig. 3g).",
+      "data": {
+        "benchmark/scdata/paper6/data/cxg_data.h5ad": "scRNA-seq dataset of T cells isolated from the caecum, small\u2011intestine lamina propria, mesenteric lymph node, and Peyer\u2019s patches"
+      },
+      "mcq_question": "**Question2:** The dataset suggests that which cell type primarily expresses Il10 in the lamina propria (LP)?\nA) CD103+SIRP\u03b1+ dendritic cells\nB) eTreg cells\nC) IL-1\u03b2+ macrophage subsets\nD) CD206+ macrophages\n\n**Answer2:** B"
+    },
+    "insight #2": {
+      "summary": "Effector Treg cells in the LP exhibit a unique transcriptional profile characterized by the expression of suppressor-associated genes like Ctla4, Maf, and Il10.",
+      "how": "Single-cell RNA sequencing (scRNA-seq) was used to analyze the transcriptional states of Treg cells in different gut compartments. The authors identified distinct transcriptional profiles for eTreg cells in the LP, marked by the expression of genes associated with suppressor functions.",
+      "relevant": "Subclustering of Treg cells revealed three subpopulations that were differentially distributed between secondary lymphoid organs and tissue (Fig. 2c). To highlight their distinct functional phenotype and spatial segregation, we refer to lymphoid-associated Treg cells as central Treg (cTreg) cells and tissue resident Treg cells as effector eTreg cells. cTreg cells express Tcf7 and Ccr7, tissue eTreg cells express the effector-associated molecules Ctla4, Maf, Tnfrsf4 and Il10, and proliferating Treg cells express histone genes (Fig. 2c and Extended Data Fig. 6a).",
+      "data": {
+        "benchmark/scdata/paper6/data/cxg_data.h5ad": "scRNA-seq dataset of T cells isolated from the caecum, small\u2011intestine lamina propria, mesenteric lymph node, and Peyer\u2019s patches",
+        "benchmark/scdata/paper6/data/Mouse_Rb_proteins_geneList_ribosome.med.miyazaki-u.ac.jp.txt": "curated gene list of mouse ribosomal protein genes (both small subunit Rps and large subunit Rpl genes)"
+      },
+      "mcq_question": "**Question2:** Analysis of the dataset suggests that effector eTreg cells in the lamina propria (LP) are distinct from central cTreg cells based on the high expression of which gene?\n\nA) Ctla4\n\nB) Ccr7\n\nC) Tcf7\n\nD) Histone genes\n\n**Answer2:** A"
+    }
+  },
+  "paper7": {
+    "insight #3": {
+      "summary": "The study identifies a significant decrease in ribosome biogenesis genes in muscle stem cells (MuSCs) with age, which is associated with reduced MuSC activation and increased senescence.",
+      "how": "The authors used single-cell RNA sequencing (scRNA-seq) to profile 17,528 high-quality MuSCs, identifying four subpopulations. Gene Ontology enrichment analysis revealed that the TNFRSF12A+ (TNF+) MuSC subpopulation showed a notable decrease in ribosome biogenesis gene expression with age. This was confirmed by fluorescence-activated cell sorting (FACS) and primary myoblast culture experiments, which showed decreased ribosome assembly genes at both transcriptional and translational levels in aged individuals. The decline in ribosome biogenesis was linked to increased expression of senescence markers, suggesting a mechanism for MuSC aging. This data is supported by Figure 2 and Extended Data Figure 3.",
+      "relevant": "The putative activated TNF+ state showed the most notable decrease in abundance during aging (Fig. 2c), indicating a decline in MuSC activation, one of the hallmarks of MuSC senescence in rodent models. The TNF+ state also exhibited the greatest decline in ribosome biogenesis gene set expression, including ribosome assembly genes and POLR1D, a key subunit forming the assembly platform for RNA polymerase I (Fig. 2d,e and Supplementary Tables 2 and 3). Using a primary myoblast culture model, we confirmed a decrease in ribosome assembly genes at both transcriptional and translational levels in aged compared to young individuals (Fig. 2f-j and Extended Data Fig. 3f). Notably, myoblast cultures from aged patients displayed several features of senescence, including upregulation of cyclin inhibi-tors CDKN2A and TP53 (Fig. 2g), \u03b2-galactosidase activity (Extended Data Fig. 3g) and senescence-associated secretory phenotype (SASP; Extended Data Fig. 3h)",
+      "data": {
+        "benchmark/scdata/paper7/data/processed_MuSC_data.h5ad": "Mouse muscle stem cells (MuSC) data"
+      },
+      "mcq_question": "**Question1:** Based on the dataset, which subpopulation of muscle stem cells (MuSCs) shows a notable decrease in ribosome biogenesis gene expression with age?\nA) POLR1D+ MuSCs\nB) TP53+ MuSCs\nC) TNFRSF12A+ (TNF+) MuSCs\nD) CDKN2A+ MuSCs\n\n**Answer1:** C"
+    },
+    "insight #5": {
+      "summary": "The study identifies a novel neuromuscular junction (NMJ) accessory population that increases with age and may aid in NMJ re-innervation.",
+      "how": "Using integrated scRNA-seq and snRNA-seq data, the authors identified a previously unreported NMJ accessory population characterized by specific marker genes related to synapse formation. GO analysis showed enrichment in synapse organization and axon development terms. Functional experiments demonstrated that knockdown of NMJ accessory markers led to decreased acetylcholine receptor (AChR) cluster formation, suggesting a role in NMJ maintenance. The increase in NMJ accessory with age was confirmed by RNAscope and immunofluorescence staining. This is supported by Figure 3 and Extended Data Figure 4.",
+      "relevant": "In the present study, we identified a previously unreported NMJ accessory population that expressed marker genes related to synapse formation that were distinct from NMJ nuclei markers (Fig. 3j and Supplementary Table 4). As indicated by GO analysis, NMJ accessory was enriched in 'synapse organization' and 'axon development' terms, possibly promoting synapse formation (Extended Data Fig. 4g). Among NMJ accessory marker genes were GRIA2, encoding the key subunit of ionotropic glutamate receptor; EFNA5, encoding an essential ligand involved in axon guidance to the myotube during limb development; and SORBS2, encoding an adapter protein involved in AChR cluster formation in mouse. pySCENIC transcription factor activity inference further confirmed the distinction between NMJ and NMJ accessory, highlighting that the ETV4 and ETV5 (ref. 55) Transcription factors known to induce synapse formation were almost inactive in NMJ accessory (Extended Data Fig. 4i,j). Interestingly, NMJ accessory increased with age, both in our dataset and in publicly available human quadriceps nuclei data (Fig. 3e and Extended Data Fig. 5b,c).",
+      "data": {
+        "benchmark/scdata/paper7/data/processed_myonuclei_data.h5ad": "Muscle nuclei data"
+      },
+      "mcq_question": "**Question1:** What does the dataset suggest about the role of the novel neuromuscular junction (NMJ) accessory population identified in the study?\nA) It is unrelated to NMJ re-innervation\nB) It decreases with age and inhibits NMJ re-innervation\nC) It decreases with age and promotes NMJ re-innervation\nD) It increases with age and may aid in NMJ re-innervation\n\n**Answer1:** D\n\n\n**Question2:** Based on the dataset, which marker genes characterize the novel neuromuscular junction (NMJ) accessory population?\nA) POLR1D\nB) EFNA5\nC) GRIA2\nD) TNFRSF12A\n\n**Answer2:** B,C"
+    },
+    "insight #6": {
+      "summary": "Aging muscle shows a shift in myonuclear composition, with slow-twitch myofibers acquiring fast-twitch characteristics, potentially as a compensatory mechanism.",
+      "how": "The authors used integrated scRNA-seq and snRNA-seq to analyze myonuclei from young and aged muscle, identifying changes in myonuclear composition. They observed an increase in fast-twitch markers within slow-twitch myofibers in aged muscle, indicating a 'slow-to-fast' myonuclear shift. This was supported by RNAscope and immunofluorescence staining, which showed fast-type mRNAs in slow-twitch myofibers. These findings are detailed in Figure 4 and Extended Data Figure 6.",
+      "relevant": "At the nuclei level, MYH1+ nuclei (type IIX) had a tendency to increase (Fig. 4e and Extended Data Fig. 6f), even though the type IIX MFs that are expected to contain these nuclei almost disappeared with age. This may point to initiation or increase of MYH1 expression in other MF types (such as type I (MYH7+) and type II (MYH2+)) and acquisition of an early hybrid phenotype. By combining staining of MYH7 protein together with MYH1 and MYH2 RNA (Extended Data Fig. 6g), we observed a number of nuclei in aged slow-twitch (MYH7+) MFs expressing fast-type mRNAs MYH2 and MYH1 (Fig. 4f and Extended Data Fig. 7a)",
+      "data": {
+        "benchmark/scdata/paper7/data/processed_myonucleicells_data.h5ad": "Muscle nuclei and cells data"
+      },
+      "mcq_question": "**Question1:** What does the dataset suggest about the shift in myonuclear composition in aged muscle?\nA) Myonuclear composition remains unchanged with age\nB) Slow-twitch myofibers acquire fast-twitch characteristics\nC) Fast-twitch myofibers acquire slow-twitch characteristics\nD) Slow-twitch myofibers lose their characteristics entirely\n\n**Answer1:** B\n\n\n**Question2:** Which type of myofiber shows an increase in fast-type mRNA expression in aged muscle according to the dataset?\nA) Type IIB myofibers\nB) Type IIX myofibers\nC) Type I myofibers\nD) Type IIA myofibers\n\n**Answer2:** C"
+    },
+    "insight #7": {
+      "summary": "The study identifies a compensatory mechanism in aged muscle involving MYH8+ myocytes, which may contribute to fast-twitch myofiber regeneration.",
+      "how": "The authors used trajectory analysis to identify MYH8+ myocytes as an intermediate state in the transition from MuSCs to myofibers, predominantly connecting to fast-twitch myofibers. They observed an increase in MYH8+ myocytes with age, supported by immunofluorescence staining showing increased MYH8 expression in aged muscle. This suggests a role in fast-twitch myofiber regeneration. These findings are detailed in Figure 4 and Extended Data Figure 7.",
+      "relevant": "MYH8+ myocyte-mediated regeneration may represent another mechanism countering fast-twitch MF loss. In particular, MYH8+ myocytes were an intermediate state in the trajectory from MuSC to MF, predominantly connecting to fast-twitch MF (Extended Data Fig. 7d,e). This is consistent with fetal MYH8 being described as a marker of muscle regeneration. MYH8+ myocytes also expressed a much higher level of fast-twitch rather than slow-twitch MF structural genes and increased in proportion with age (Fig. 4h,i and Supplementary Table 5), as recently reported.",
+      "data": {
+        "benchmark/scdata/paper7/data/processed_myonucleicells_data.h5ad": "Muscle nuclei and cells data"
+      },
+      "mcq_question": "**Question1:** What role do MYH8+ myocytes play in aged muscle, according to the dataset?\nA) They primarily contribute to slow-twitch myofiber regeneration\nB) They act as an intermediate state contributing to fast-twitch myofiber regeneration\nC) They remain an immature myocyte population with no clear regenerative role\nD) They predominantly differentiate into fibro-adipogenic progenitors rather than myofibers.\n\n**Answer1:** B"
+    }
+  },
+  "paper8": {
+    "insight #12": {
+      "summary": "Dietary challenges reveal that enterocyte domains exhibit unique transcriptional responses to nutrient changes, supporting their specialized roles in metabolism.",
+      "how": "The authors conducted dietary challenge experiments by feeding mice different diets (high-fat, high-carbohydrate, and standard chow) and analyzing the transcriptional responses of enterocytes. They observed that domain C expanded in response to a high-carbohydrate diet, while domains A/B and D were associated with lipid metabolism. These findings highlight the functional specialization of enterocyte domains in nutrient absorption.",
+      "relevant": "These functional analyses suggest that the highest levels of lipid and carbohydrate metabolism occur in distinct domains when mice are fed standard chow: fatty acid metabolism most prominently in domains A and B, phospholipid metabolism in domain D, and carbohydrate absorption broadly across the intestine but peaking in domain C. We hypothesized that enterocytes within these domains would differentially upregulate transcripts encoding the enzymes, receptors and/or binding proteins needed to absorb an increased lipid or carbohydrate dietary load.",
+      "data": {
+        "benchmark/scdata/paper8/data/mouse_data.h5ad": "Epithelial cells collected from 30 segments across the proximal (1) to distal (30) ends of the mouse small intestine.",
+        "benchmark/scdata/paper8/data/domain_mapping.json": "Domain names as keys mapped to segments available in the mouse dataset."
+      },
+      "mcq_question": "**Question1:** What transcriptional response does the dataset suggest domain C enterocytes have to a high-carbohydrate diet?\n\nA) Domain C enterocytes decrease in number\n\nB) Domain C enterocytes show no change\n\nC) Domain C enterocytes expand\n\nD) Domain C enterocytes switch to lipid metabolism\n\n**Answer1:** C\n\n**Question2:** According to the dataset, which domains are associated with lipid metabolism when mice are fed a standard chow diet?\n\nA) Domains A/B and D\n\nB) Domain C only\n\nC) Domain E only\n\nD) All domains equally\n\n**Answer2:** A"
+    }
+  },
+  "paper9": {
+    "insight #14": {
+      "summary": "The study identifies a significant doubling of immune cells in the aged ovary, with lymphocyte proportions increasing the most, which is confirmed by flow cytometry.",
+      "how": "The authors performed single-cell RNA sequencing (scRNA-seq) on ovarian tissue from young (3-month-old) and aged (9-month-old) mice. They observed a more than twofold increase in immune cells in the aged ovaries. This was further validated by flow cytometry, which confirmed the increased percentage and number of CD90+ cells (T cells and innate lymphoid cells) in aged ovaries. The authors used UMAP plots to visualize these changes, and the findings are detailed in Figure 2 and Supplementary Figure 1e.",
+      "relevant": "Advancing age changed ovarian cellularity in our analyses (Fig. 2a,b and Supplementary Fig. 1e). The percentage of GCs was lower in 9-month-old ovaries, which can be explained by both declines in  the number of primordial and tertiary follicles and a trending decline in secondary follicles observed in the aged mice (Fig. 2c-e). The most marked change in ovarian cellularity with advancing age was the greater than twofold increase in immune cells (Fig. 2a,b and Supplementary Fig. 1e) ... To confirm our transcriptional findings related to ovarian immune cell accumulation, we performed high-dimensional flow cytometry to identify age-related differences in the fraction of distinct immune cell types within the ovary. We first assessed the percentage and total number of broadly defined immune cell types, including B cells (CD19+), T cells and innate lymphoid cells (CD90+) and myeloid cells (CD11b+). We observed a higher percentage and number of CD90+ cells (T cells and innate lymphoid cells) in aged ovaries (Fig. 3e,f and Supplementary Fig. 4a), which aligns with the scRNA-seq findings.",
+      "data": {
+        "benchmark/scdata/paper9/data/data.h5ad": "A single-cell atlas of the aging mouse ovary"
+      },
+      "mcq_question": "**Question1:** Based on the dataset, which cell type shows a significant increase in the aged ovaries?\nA) Myeloid cells (CD11b+)\nB) Epithelial cells\nC) Granulosa cells\nD) CD90+ cells (T cells and innate lymphoid cells)\n\n**Answer1:** D"
+    },
+    "insight #15": {
+      "summary": "Type 1 and Type 17 lymphoid cells significantly increase in the aged ovary, suggesting a role in chronic inflammation and fibrosis.",
+      "how": "The authors performed subclustering of immune cells and identified 13 immune subclusters. They found that the most significant increases with age were in Type 1 and Type 17 lymphoid cells, including CD8+ T cells, Type 1 NKT cells, and Type 17 \u03b3\u03b4T cells. These findings were confirmed by flow cytometry and are detailed in Figure 3 and Supplementary Figure 4.",
+      "relevant": "Following observation of the increased proportion of immune cells within the aged ovary, we performed subclustering of immune cells  to determine which specific populations were changed with aging  (Fig. 3a). Following reclustering, the original immune cell CLUs separated into 13 SCLs (Fig. 3b). Cell type identification for each SCL was performed based on known gene expression profiles and, with the help of databases Cellmarker2.0 (ref. 36) and ImmGen, with the representative genes described in Fig. 3c. All markers for immune SCLs are listed in Supplementary Data 1. Because the overall immune cell proportion doubled from 3 to 9 months of age, percentages of total cells in each SCL were assessed and compared by age. Intriguingly, cell types showing the greatest increase with age were lymphoid, including B cells, conventional T cells and innate-like T cells. The biggest difference in abundance with age was in a SCL containing Type 1 lymphoid cells, as defined by the expression of Tbx21 (ref. 38) and Ifng.",
+      "data": {
+        "benchmark/scdata/paper9/data/data.h5ad": "A single-cell atlas of the aging mouse ovary"
+      },
+      "mcq_question": "**Question1:** Which lymphoid cell types are found to increase significantly in the aged ovaries according to the dataset?\nA) Type 2 cells\nB) Type 17 cells\nC) Regulatory T cells\nD) Type 1 cells\n\n**Answer1:** B,D"
+    },
+    "insight #16": {
+      "summary": "Theca cells in aged ovaries show upregulation of fibrogenesis-related pathways, suggesting an early role in collagen production and deposition.",
+      "how": "Using scRNA-seq and Ingenuity Pathway Analysis (IPA), the authors identified age-related changes in theca cells, including significant upregulation of fibrogenesis-related pathways such as TGFB1, TGFB2, and SMAD3. These findings suggest that theca cells may be early contributors to ovarian fibrosis. The results are presented in Figures 5 and 6.",
+      "relevant": "In contrast to fibroblast-like cells, TCs showed a significant upregulation in several upstream regulators of fibrogenesis including TGFB1, TGFB2 and SMAD3 (Fig. 6c), which suggests that TCs may be one of the earliest cell types involved in generation of the signaling cascade for collagen production and deposition.",
+      "data": {
+        "benchmark/scdata/paper9/data/data.h5ad": "A single-cell atlas of the aging mouse ovary"
+      },
+      "mcq_question": "**Question1:** Based on the dataset analysis, which pathway is significantly upregulated in theca cells from aged ovaries?\n\nA) Apoptosis-related pathways\n\nB) Fibrogenesis-related pathways\n\nC) Inflammatory response pathways\n\nD) Cell cycle regulation pathways\n\n**Answer1:** B"
+    },
+    "insight #17": {
+      "summary": "Vascular endothelial cells in aged ovaries exhibit increased DNA damage regulation and markers of cellular senescence.",
+      "how": "The authors performed subclustering of endothelial and epithelial cells and found that vascular endothelial cells showed modest increases in DNA damage regulation pathways and upstream regulators of cellular senescence, such as TP53, CDKN1A, and CDKN2A. These findings are detailed in Figures 8d-f.",
+      "relevant": "The only epithelial/endothelial SCL that showed age-related changes in the pathway analyses was the vascular endothelium; this SCL was found to have modestly increased DNA damage regulation (Fig. 8d). Another interesting observation was that upstream regulators of cellular senescence (TP53, CDKN1A and CDKN2A) were found to be increased with aging in vascular endothelial cells (Fig. 8e)",
+      "data": {
+        "benchmark/scdata/paper9/data/data.h5ad": "A single-cell atlas of the aging mouse ovary"
+      },
+      "mcq_question": "**Question1:** Which markers of cellular senescence are increased in vascular endothelial cells of aged ovaries?\nA) NF-kB and RELA\nB) TP53 and CDKN2A\nC) AKT1 and MTOR\nD) MYC and BCL2\n\n**Answer1:** B\n\n\n**Question2:** What cellular process is increased in vascular endothelial cells of aged ovaries according to the dataset?\nA) Lipid metabolism\nB) Apoptosis regulation\nC) DNA damage regulation\nD) Protein synthesis\n\n**Answer2:** C"
+    }
+  },
+  "paper12": {
+    "insight #27": {
+      "summary": "IFN-I-responsive microglia are involved in the phagocytosis of whole neurons, a process essential for normal cortical development and preventing the accumulation of DNA-damaged neurons.",
+      "how": "The study demonstrated that IFN-I-responsive microglia actively engulf whole neurons during cortical development. This was evidenced by immunostaining for IFITM3, a marker of IFN-I-responsive microglia, which showed increased presence in deprived cortices. The engulfment process was confirmed using several markers and transgenic lines, indicating that these microglia are crucial for removing neurons with DNA damage. This finding is detailed in Figures 3 and 4.",
+      "relevant": "IFN-I responsive microglia engulf neurons during cortical developmental remodeling... We identified a rare population of IFITM3+ microglia in deeper cortical layers (L4/5) that were significantly increased in deprived cortex as quantified in situ and by flow cytometry (Figures 3B, 3C, and S3A)... These data suggest that IFN-I signaling may promote elimination of neurons that had accumulated DNA damage.",
+      "data": {
+        "benchmark/scdata/paper12/data/data.h5ad": "scRNA-seq data from barrel cortex (Mouse)"
+      },
+      "mcq_question": "**Question1:** What does the dataset indicate about the role of IFN-I-responsive microglia in cortical development?\nA) They promote neuron proliferation.\nB) They are involved in the phagocytosis of whole neurons.\nC) They inhibit neuron differentiation.\nD) They prevent the accumulation of DNA-damaged neurons.\n\n**Answer1:** B,D"
+    }
+  }
+}
