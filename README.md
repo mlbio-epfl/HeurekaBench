@@ -20,4 +20,34 @@ Next, we demonstrate the use of `heurekabench` framework to create a benchmark f
 ## Running AI Co-scientists on the benchmark
 To evaluate, the agent is provided with the questions from the benchmark and has to autonomously design and execute a multi-step analysis to produce a data-driven answer that is evaluated against published findings. Currently, we adapt existing single-cell agents as AI Co-scientists to solve the tasks in the `scheurekabench` benchmark. More details on the agents and how to run them are provided in the [README](scheurekabench/README.md) file.
 
-> **Note:** All the single-cell datasets should be stored in the `scheurekabench/benchmark/scdata` folder. The single-cell datasets (`.h5ad`, `.txt`, `.csv`, etc.) will be made available [here]() upon acceptance. Once downloaded, keep read-only access to these datasets.
+## Getting the single-cell datasets
+All the single-cell datasets should be stored in the `scheurekabench/benchmark/scdata` folder. The single-cell datasets (`.h5ad`, `.txt`, `.csv`, etc.) are available [here](https://drive.google.com/drive/folders/1qRPW4P_Un0Pjm4Pbakvk1KhZdNiww22g?usp=sharing) in a compressed manner. Please follow the instructions below to download and extract the datasets:
+
+You should have all of the following in the same directory (ideally at the root of the project):
+
+- `scdata.part_[aa-af]`
+- `scdata.tar.zst.sha256`
+
+---
+
+```bash
+# Reassemble the archive
+cat scdata.part_* > scdata.tar.zst 
+
+# Verify the integrity of the archive
+# Expected output: scdata.tar.zst: OK
+sha256sum -c scdata.tar.zst.sha256
+
+# Optional: Verify the integrity of the archive using zstd
+zstd -t scdata.tar.zst
+
+# Extract the datasets (will automatically extract to `scheurekabench/benchmark/scdata/`)
+# You can check the size after extraction with `du -sh scheurekabench/benchmark/scdata/` which should be 44 GB
+tar -I zstd -xf scdata.tar.zst
+
+# Optional: Clean up the files
+rm scdata.part_* scdata.tar.zst
+
+# Mandatory: give read permissions to the `scheurekabench/benchmark/scdata/` folder to all users
+chmod -R a+r scheurekabench/benchmark/scdata/
+```

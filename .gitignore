@@ -5,3 +5,4 @@ commands
 
 **__pycache__**
 scheurekabench/benchmark/scdata
+compressed_scdata
