@@ -2,7 +2,7 @@
 
 [![Official Site](https://img.shields.io/badge/Official%20Site-4b5bdc?style=for-the-badge&logo=googlechrome&logoColor=white)](https://brbiclab.epfl.ch/projects/heurekabench/)
 [![arXiv](https://img.shields.io/badge/arXiv-PPPP.PPPPP-b31b1b?style=for-the-badge&logo=arxiv&logoColor=white)](#)
-[![GitHub](https://img.shields.io/badge/GitHub-Code-181717?style=for-the-badge&logo=github&logoColor=white)](#)
+[![GitHub](https://img.shields.io/badge/GitHub-Code-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mlbio-epfl/HeurekaBench)
 [![Citation](https://img.shields.io/badge/Citation-2f855a?style=for-the-badge)](#citation)
 
 **[Siba Smarak Panigrahi*](https://sibasmarak.github.io/)** · **[Jovana Videnović*](https://scholar.google.com/citations?user=ShYOPIkAAAAJ)** · **[Maria Brbić](https://brbiclab.epfl.ch/team/)**
@@ -26,6 +26,18 @@ More details on the framework and creating new benchmarks in other scientific do
 
 # Evaluating your AI agent on the sc-HeurekaBench benchmark
 To evaluate, the agent is provided with the questions from the benchmark and has to autonomously design and execute a multi-step analysis to produce a data-driven answer that is evaluated against published findings. Below, we provide instructions on how to get the single-cell datasets and then how to adapt existing single-cell agents as AI Co-scientists to solve the tasks in the `scheurekabench` benchmark. The benchmark questions and answers are available in the `scheurekabench/benchmark/mcq.json` and `scheurekabench/benchmark/oeq.json` files.
+
+All versions of the benchmark are listed below:
+```
+scheurekabench/benchmark/
+  |- scdata (data folder with all the single-cell datasets and additional files, e.g., .txt, .csv, etc.)
+  |- mcq_lite.json (multiple-choice questions, lite-version for computationally expensive agents)
+  |- mcq.json (multiple-choice questions, full-version)
+  |- mcq_tu.json (multiple-choice questions that require specific tool usage)
+  |- oeq_lite.json (open-ended questions, lite-version)
+  |- oeq.json (open-ended questions, full-version)
+  |- oeq_tu.json (open-ended questions that require specific tool usage)
+```
 
 ## Getting the single-cell datasets
 All the single-cell datasets should be stored in the `scheurekabench/benchmark/scdata` folder. The single-cell datasets (`.h5ad`, `.txt`, `.csv`, etc.) are available [here](https://drive.google.com/drive/folders/1qRPW4P_Un0Pjm4Pbakvk1KhZdNiww22g?usp=sharing) in a compressed manner. Please follow the instructions below to download and extract the datasets:
@@ -69,6 +81,7 @@ Create a conda environment with the required packages mentioned below. If you id
 ```bash
 conda create -n heurekabench python=3.12
 conda activate heurekabench
+pip install vllm=0.11.0
 pip install python-dotenv PyMuPDF openai anthropic nbformat
 ```
 
@@ -111,13 +124,6 @@ python run_biomni/run_biomni.py \
 ```
 
 #### Running Open-Source LLMs
-
-> **Note:** It is recommended to create a new conda environment with the required packages to serve with vLLM in the following manner (to avoid potential conflicts with other packages). If there are some packages that are missing when serving, please create a pull request to add them and we will update the following instructions accordingly.
-```bash
-conda create -n vllm-serve python=3.11.13
-conda activate vllm-serve
-pip install vllm=0.11.0
-```
 
 First, start a vLLM server with the desired LLM (e.g., to serve `openai/gpt-oss-120b` with 4 GPUs):
 
@@ -164,11 +170,11 @@ There is an option to use batch processing for open-ended question evaluation (t
 Finally, the evaluation results and associated files will be found within the `<root_dir>` directory.
 
 
-## Extending HeurekaBench to other domains for creating new benchmarks
+# Extending HeurekaBench to other domains for creating new benchmarks
 
-Next, we demonstrate the use of `heurekabench` framework to create a benchmark for the single-cell biology domain, sc-HeurekaBench. The benchmark creation pipeline stages are available in the `scheurekabench` folder and for more details, please refer to the [README](scheurekabench/README.md) file.
+Our proposed HeurekaBench framework can be used to create a benchmark for any scientific domain with experimental datasets. We provide an instantiation of the framework for the single-cell biology domain, sc-HeurekaBench. All relevant scripts for benchmark creation are available in the [`scheurekabench`](scheurekabench) folder. To avoid overwhelming this README, we have provided the details in its own [`README`](scheurekabench/README.md) file.
 
-## Citation
+# Citation
 If you find this work useful, please cite our paper:
 
 ```
