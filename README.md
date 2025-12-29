@@ -25,7 +25,8 @@ The framework consists of three stages:
 More details on the framework and creating new benchmarks in other scientific domainsare provided in the [Extending HeurekaBench to other domains for creating new benchmarks](#Extending-HeurekaBench-to-other-domains-for-creating-new-benchmarks) section below.
 
 # Evaluating your AI agent on the sc-HeurekaBench benchmark
-To evaluate, the agent is provided with the questions from the benchmark and has to autonomously design and execute a multi-step analysis to produce a data-driven answer that is evaluated against published findings. Below, we provide instructions on how to get the single-cell datasets and then how to adapt existing single-cell agents as AI Co-scientists to solve the tasks in the `scheurekabench` benchmark. The benchmark questions and answers are available in the `scheurekabench/benchmark/mcq.json` and `scheurekabench/benchmark/oeq.json` files.
+
+In the question solving stage, the agent is provided with the questions from the benchmark and has to autonomously design and execute a multi-step analysis to produce a data-driven answer that is evaluated against published findings. Below, we provide instructions on how to get the single-cell datasets and then how to run and evaluate existing single-cell agents as AI Co-scientists on the sc-HeurekaBench. The benchmark questions and answers are available in the `scheurekabench/benchmark/mcq.json` and `scheurekabench/benchmark/oeq.json` files.
 
 All versions of the benchmark are listed below:
 ```
