@@ -66,12 +66,22 @@ def run_agent(insight_dict, output_dir, q_type, biomni_args):
         sys.stdout = open(output_path, 'w')
         sys.stderr = sys.stdout
 
-        if biomni_args["llm"] is not None and biomni_args["source"] is not None and biomni_args["base_url"] is not None:
-            agent = A1(llm=biomni_args["llm"], source=biomni_args["source"], base_url=biomni_args["base_url"], timeout_seconds=1800, temperature=biomni_args["temperature"], 
-                       self_critic=biomni_args["self_critic"], plan_critic=biomni_args["plan_critic"], use_tool_retriever=biomni_args["use_tool_retriever"])                       
-        else:
-            agent = A1(llm=biomni_args["llm"], timeout_seconds=1800, temperature=biomni_args["temperature"], 
-                       self_critic=biomni_args["self_critic"], plan_critic=biomni_args["plan_critic"], use_tool_retriever=biomni_args["use_tool_retriever"])
+        assert biomni_args["llm"] is not None, "LLM is not set"
+        
+        agent_kwargs = {
+            "llm": biomni_args["llm"],
+            "timeout_seconds": 1800,
+            "temperature": biomni_args["temperature"],
+            "self_critic": biomni_args["self_critic"],
+            "plan_critic": biomni_args["plan_critic"],
+            "use_tool_retriever": biomni_args["use_tool_retriever"]
+        }
+        
+        if biomni_args["source"] is not None and biomni_args["base_url"] is not None:
+            agent_kwargs["source"] = biomni_args["source"]
+            agent_kwargs["base_url"] = biomni_args["base_url"]
+        
+        agent = A1(**agent_kwargs)
 
         if q_type == 'oe':
             curr_prompt = oe_initial_prompt.format(

@@ -10,23 +10,23 @@
 ---
 ---
 
-`heurekabench` is a framework to create benchmarks with exploratory, open-ended research questions on experimental datasets for AI co-scientists. Each question in the benchmark is grounded in a scientific study and its corresponding code repository, and is created using a semi-automated pipeline that leverages multiple LLMs to extract insights and generate candidate workflows, which are then verified against reported findings. An instantiation of this framework is sc-HeurekaBench, available in `scheurekabench`, for benchmarking AI co-scientists in the single-cell domain.
+**HeurekaBench** is a framework to create benchmarks with exploratory, open-ended research questions on experimental datasets for AI Co-scientists. Each question in the benchmark is grounded in a scientific study and its corresponding code repository, and is created using a semi-automated pipeline that leverages multiple LLMs to extract insights, which are then verified against reported findings. An instantiation of this framework is **sc-HeurekaBench**, available in `scheurekabench`, for benchmarking AI Co-scientists in the single-cell domain.
 
-# Overview of the Framework
+# :globe_with_meridians: Overview of the Framework
 <p align="center">
   <img src="figs/framework.png" alt="Overview of the Framework" width="800"/>
 </p>
 
 The framework consists of three stages:   
-- **(a) insight generation**: where candidate insights are extracted from scientific articles and semi-automatically validated  
+- **(a) insight generation**: where validated insights are extracted from scientific articles  
 - **(b) question generation**: where validated insights are reformulated as question-answer pairs   
 - **(c) question solving**: where the agent autonomously designs and executes a multi-step analysis, producing a data-driven answer that is evaluated against published findings.  
 
-More details on the framework and creating new benchmarks in other scientific domainsare provided in the [Extending HeurekaBench to other domains for creating new benchmarks](#Extending-HeurekaBench-to-other-domains-for-creating-new-benchmarks) section below.
+Curious about **extending HeurekaBench to other scientific domains and create new benchmarks to evaluate your own AI Co-scientist**? Check out the [HeurekaBench for creating new scientific benchmarks](README.md#heurekabench-for-creating-new-scientific-benchmarks) section.
 
-# Evaluating your AI agent on the sc-HeurekaBench benchmark
+# :rocket: Evaluating your AI Co-scientist on sc-HeurekaBench
 
-In the question solving stage, the agent is provided with the questions from the benchmark and has to autonomously design and execute a multi-step analysis to produce a data-driven answer that is evaluated against published findings. Below, we provide instructions on how to get the single-cell datasets and then how to run and evaluate existing single-cell agents as AI Co-scientists on the sc-HeurekaBench. The benchmark questions and answers are available in the `scheurekabench/benchmark/mcq.json` and `scheurekabench/benchmark/oeq.json` files.
+In the question solving stage, an AI agent is provided with the questions from the benchmark and has to autonomously design and execute multi-step analyses to produce a data-driven answer that is evaluated against published findings. Below, we provide instructions on how to get the single-cell datasets and then how to run and evaluate existing single-cell agents as AI Co-scientists on the sc-HeurekaBench. The benchmark questions and answers are available in the [`scheurekabench/benchmark/mcq.json`](scheurekabench/benchmark/mcq.json) and [`scheurekabench/benchmark/oeq.json`](scheurekabench/benchmark/oeq.json) files.
 
 All versions of the benchmark are listed below:
 ```
@@ -34,13 +34,13 @@ scheurekabench/benchmark/
   |- scdata (data folder with all the single-cell datasets and additional files, e.g., .txt, .csv, etc.)
   |- mcq_lite.json (multiple-choice questions, lite-version for computationally expensive agents)
   |- mcq.json (multiple-choice questions, full-version)
-  |- mcq_tu.json (multiple-choice questions that require specific tool usage)
+  |- mcq_tu.json (multiple-choice questions that require tool usage)
   |- oeq_lite.json (open-ended questions, lite-version)
   |- oeq.json (open-ended questions, full-version)
-  |- oeq_tu.json (open-ended questions that require specific tool usage)
+  |- oeq_tu.json (open-ended questions that require tool usage)
 ```
 
-## Getting the single-cell datasets
+## :mag: Getting the single-cell datasets
 All the single-cell datasets should be stored in the `scheurekabench/benchmark/scdata` folder. The single-cell datasets (`.h5ad`, `.txt`, `.csv`, etc.) are available [here](https://drive.google.com/drive/folders/1qRPW4P_Un0Pjm4Pbakvk1KhZdNiww22g?usp=sharing) in a compressed manner. Please follow the instructions below to download and extract the datasets:
 
 You should have all of the following in the same directory (ideally at the root of the project):
@@ -68,12 +68,12 @@ tar -I zstd -xf scdata.tar.zst
 # Optional: Clean up the files
 rm scdata.part_* scdata.tar.zst
 
-# Mandatory: give read permissions to the `scheurekabench/benchmark/scdata/` folder to all users
+# Mandatory: give read permissions to the `scheurekabench/benchmark/scdata/` folder to all users (so that agent does not modify and overwrite the data files)
 chmod -R a+r scheurekabench/benchmark/scdata/
 ```
 
-## Running AI agents
-> **Note:** The paths in the datasets should contain the absolute paths otherwise the agent sometimes fails to find the data files if it is relative paths. We recommend to append absolute path to the `data` keys in `scheurekabench/benchmark/oeq.json` and `scheurekabench/benchmark/mcq.json` files.
+## :robot: Running AI agents
+> **Note:** The paths in the datasets should contain the absolute paths otherwise the agent sometimes fails to find the data files if it is relative paths. We recommend to append absolute path to the `data` keys in [`scheurekabench/benchmark/oeq.json`](scheurekabench/benchmark/oeq.json) and [`scheurekabench/benchmark/mcq.json`](scheurekabench/benchmark/mcq.json) files.
 
 The first task is to create a `.env` file in the root directory of the project. An example file is provided in the [.env.example](.env.example) file. You can copy it and rename it to `.env`. 
 
@@ -97,8 +97,8 @@ python run_baselines/run_open_llms.py \
     --llm_name <LLM_name> \
     --q_type <question_type: mcq|oe>
 ```
-### Running CellVoyager baseline
-To run CellVoyager baseline, you can use the following command:
+### Running CellVoyager agent
+To run CellVoyager agent, you can use the following command:
 
 ```bash
 cd scheurekabench/run_baselines/CellVoyager
@@ -108,12 +108,12 @@ python run_cellvoyager.py \
     --cellvoyager_llm claude-sonnet-4-20250514 \
     --q_type <question_type: mcq|oe>
 ```
-### Running Biomni with Different Models
+### Running Biomni agent with Different Models
 > **Note:** We provide the adaptation of Biomni version 0.0.6 for the following experiments. The original Biomni repository is available at [here](https://github.com/snap-stanford/Biomni) and newer versions can be merged appropriately.
 
 #### Running Closed-Source LLMs
 
-To run Biomni with closed-source LLMs, you can use the following command:
+To run Biomni agent with closed-source LLMs, you can use the following command:
 
 ```bash
 cd scheurekabench
@@ -148,16 +148,18 @@ python run_biomni/run_biomni.py \
     --q_type <question_type: mcq|oe>
     --temperature <temperature>
 ```
+> **Note:** Other AI agents can be run similar to the above Biomni commands - you will only need to add the instantiation code of your agent, everything else remains the same. Please refer to L69-84 in [`run_biomni/run_biomni.py`](scheurekabench/run_biomni/run_biomni.py#L69-L84) for more details.
 
-### Evaluation Workflow: Obtain correctness scores
+## :bar_chart: Getting the metrics
 
-Once the agent has produced outputs, we first extract the solutions from the agent outputs with the following command:
+Once the agent has produced outputs, we first **extract the solutions** from the agent outputs with the following command:  
+
 ```bash
 python extract_agent_answer.py --root_dir <path_to_agent_outputs>
 ```
-> **Note:** Some agent runs might have not produced appropriate outputs (e.g., <solution></solution> tags do not contain the solution because the agent stopped prematurely, or segmentation fault occurred, no response between <solution> and </solution> tags, etc.). In such cases, it is recommended to re-run the agent by deleting the output files for those questions, otherwise GPT-4o judge will not assign meaningful scores to such outputs.
+> **Note:** Some agent runs might have not produced appropriate outputs (e.g., <solution></solution> tags do not contain the solution because the agent stopped prematurely, or segmentation fault occurred, no response between <solution> and </solution> tags, etc.). In such cases, it is recommended to re-run the agent by deleting the output files for those questions, otherwise LLM judge will not assign meaningful scores to such outputs.
 
-After extracting the solutions (which will be located in the `<root_dir>/processed_results.json` file), we can run the evaluation with the following command:
+After extracting the solutions (located in the `<root_dir>/processed_results.json` file), we can **get the metrics** with the following command:
 
 ```bash
 python evaluate_agent_answer.py \
@@ -171,11 +173,11 @@ There is an option to use batch processing for open-ended question evaluation (t
 Finally, the evaluation results and associated files will be found within the `<root_dir>` directory.
 
 
-# Extending HeurekaBench to other domains for creating new benchmarks
+# :bulb: HeurekaBench for creating new scientific benchmarks
 
-Our proposed HeurekaBench framework can be used to create a benchmark for any scientific domain with experimental datasets. We provide an instantiation of the framework for the single-cell biology domain, sc-HeurekaBench. All relevant scripts for benchmark creation are available in the [`scheurekabench`](scheurekabench) folder. To avoid overwhelming this README, we have provided the details in its own [`README`](scheurekabench/README.md) file.
+Our proposed HeurekaBench framework can be used to create a benchmark for any scientific domain with experimental datasets. To avoid overwhelming this README, we provide a **step-by-step guide** on how to create a benchmark for your own scientific domain in its own [`README`](scheurekabench/README.md) file.
 
-# Citation
+# :scroll: Citation
 If you find this work useful, please cite our paper:
 
 ```
