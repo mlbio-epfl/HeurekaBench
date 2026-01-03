@@ -22,7 +22,7 @@ The framework consists of three stages:
 - **(b) question generation**: where validated insights are reformulated as question-answer pairs   
 - **(c) question solving**: where the agent autonomously designs and executes a multi-step analysis, producing a data-driven answer that is evaluated against published findings.  
 
-Curious about **extending HeurekaBench to other scientific domains and create new benchmarks to evaluate your own AI Co-scientist**? Check out the [HeurekaBench for creating new scientific benchmarks](README.md#heurekabench-for-creating-new-scientific-benchmarks) section.
+Curious about **extending HeurekaBench to other scientific domains and create new benchmarks to evaluate your own AI Co-scientist**? Check out the [HeurekaBench for creating new scientific benchmarks](README.md#bulb-heurekabench-for-creating-new-scientific-benchmarks) section.
 
 # :rocket: Evaluating your AI Co-scientist on sc-HeurekaBench
 
