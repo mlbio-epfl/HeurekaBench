@@ -182,9 +182,9 @@ If you find this work useful, please cite our paper:
 
 ```
 @article{panigrahi2026heurekabench,
-    title={HeurekaBench: A Benchmarking Framework for AI Co-scientist},
-    author={Panigrahi, Siba Smarak and Videnovic, Jovana and Brbic, Maria},
-    journal={arXiv preprint arXiv:2601.01678}
-    year={2026}
+  title={HeurekaBench: A Benchmarking Framework for AI Co-scientist},
+  author={Panigrahi, Siba Smarak and Videnovi{\'c}, Jovana and Brbi{\'c}, Maria},
+  journal={arXiv preprint arXiv:2601.01678},
+  year={2026}
 }
 ```
