@@ -1,4 +1,4 @@
-# HeurekaBench: A Benchmarking Framework for AI Co-scientist
+# [ICLR 2026] HeurekaBench: A Benchmarking Framework for AI Co-scientist
 
 [![Official Site](https://img.shields.io/badge/Official%20Site-4b5bdc?style=for-the-badge&logo=googlechrome&logoColor=white)](https://brbiclab.epfl.ch/projects/heurekabench/)
 [![arXiv](https://img.shields.io/badge/arXiv-2601.01678-b31b1b?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2601.01678)
@@ -181,10 +181,12 @@ Our proposed HeurekaBench framework can be used to create a benchmark for any sc
 If you find this work useful, please cite our paper:
 
 ```
-@article{panigrahi2026heurekabench,
-  title={HeurekaBench: A Benchmarking Framework for AI Co-scientist},
-  author={Panigrahi, Siba Smarak and Videnovi{\'c}, Jovana and Brbi{\'c}, Maria},
-  journal={arXiv preprint arXiv:2601.01678},
-  year={2026}
+@inproceedings{
+panigrahi2026heurekabench,
+title={HeurekaBench: A Benchmarking Framework for {AI} Co-scientist},
+author={Siba Smarak Panigrahi and Jovana Videnovi{\'c} and Maria Brbic},
+booktitle={The Fourteenth International Conference on Learning Representations},
+year={2026},
+url={https://openreview.net/forum?id=Y7xCdFuFw7}
 }
 ```
