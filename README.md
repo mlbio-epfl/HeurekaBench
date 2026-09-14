@@ -41,7 +41,7 @@ scheurekabench/benchmark/
 ```
 
 ## :mag: Getting the single-cell datasets
-All the single-cell datasets should be stored in the `scheurekabench/benchmark/scdata` folder. The single-cell datasets (`.h5ad`, `.txt`, `.csv`, etc.) are available [here](https://drive.google.com/drive/folders/1qRPW4P_Un0Pjm4Pbakvk1KhZdNiww22g?usp=sharing) in a compressed manner. Please follow the instructions below to download and extract the datasets:
+All the single-cell datasets should be stored in the `scheurekabench/benchmark/scdata` folder. The single-cell datasets (`.h5ad`, `.txt`, `.csv`, etc.) are available [here](https://huggingface.co/datasets/sibasmarakp/sc-HeurekaBench/tree/main) in a compressed manner. Please follow the instructions below to download and extract the datasets:
 
 You should have all of the following in the same directory (ideally at the root of the project):
 
