@@ -2,7 +2,6 @@
 
 [![Website](https://img.shields.io/badge/Project-Website-4b5bdc?style=for-the-badge&logo=googlechrome&logoColor=8ea2ff&labelColor=0d1117)](https://brbiclab.epfl.ch/projects/heurekabench/)
 [![arXiv](https://img.shields.io/badge/arXiv-2601.01678-b31b1b?style=for-the-badge&logo=arxiv&logoColor=ff6b6b&labelColor=0d1117)](https://arxiv.org/abs/2601.01678)
-[![GitHub](https://img.shields.io/badge/GitHub-Code-f0f6fc?style=for-the-badge&logo=github&logoColor=white&labelColor=0d1117)](https://github.com/mlbio-epfl/HeurekaBench)
 [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-Dataset-FFD21E?style=for-the-badge&logo=huggingface&logoColor=FFD21E&labelColor=0d1117)](https://huggingface.co/datasets/sibasmarakp/sc-HeurekaBench)
 [![Citation](https://img.shields.io/badge/Cite-BibTeX-2f855a?style=for-the-badge&logo=googlescholar&logoColor=4ade80&labelColor=0d1117)](#scroll-citation)
 
